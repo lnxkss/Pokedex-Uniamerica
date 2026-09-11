@@ -58,6 +58,14 @@ root {
     width: 60px;
 }
 
+.Fourdex {
+   margin-top: 70px;
+   margin-left: 520px;
+   width: 500px;
+   justify-content: center;
+   display: flex;
+   
+}
 .divPokemons {
 margin-top: 15%;
 margin-left: 14%;
