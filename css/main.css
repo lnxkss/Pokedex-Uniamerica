@@ -7,10 +7,6 @@ body {
     background-color: blue;
 }
 
-body{
-
-
-}
 root {
     --cor-text: #2c2727;
     --secondary-text: #ffff;
@@ -45,8 +41,8 @@ root {
 }
 
 .logo{
+    margin-top: 20px;
     width: 80px;
-    margin-bottom: -20px;
 }
 .menu-item {
     width: 100%;
@@ -60,4 +56,13 @@ root {
 
 .menu-icon {
     width: 60px;
+}
+
+.divPokemons {
+margin-top: 15%;
+margin-left: 14%;
+width: 1200px;
+min-height: 580px;
+background-color: #e8e8e8;
+border-radius: 2%;
 }
