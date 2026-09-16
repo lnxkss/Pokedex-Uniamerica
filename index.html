@@ -1,38 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fourdex - Home</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
     <nav class="sidebar">
-        <a class="menu-item" href="index.html">
-            <img src="imgs/logo.webp" alt="Logo" class="logo">
-        </a>
-        <a class="menu-item" href="pokedex.html">
-            <img src="imgs/casa fundo.png" alt="Pokedex" class="menu-icon">
-        </a>
-        <a class="menu-item" href="pokedex.html">
-            <img src="imgs/pasta fundo.png" alt="Pokedex" class="menu-icon">
-        </a>
-        <a class="menu-item" href="pokedex.html">
-            <img src="./imgs/Captura_de_tela_2026-09-10_201244-removebg-preview.png" alt="Pokedex" class="menu-icon">
-        </a>
-         <a class="menu-item" href="pokedex.html">
-            <img src="imgs/conta fundo.png" alt="Pokedex" class="menu-icon">
-        </a>
-        <a class="menu-item" href="pokedex.html" class="menu-icon">Sair</a>
-        
+      <a class="menu-item" href="index.html">
+        <img src="imgs/logo.webp" alt="Logo" class="logo" />
+      </a>
+      <a class="menu-item" href="pokedex.html">
+        <img src="imgs/casa fundo.png" alt="Pokedex" class="menu-icon" />
+      </a>
+      <a class="menu-item" href="pokedex.html">
+        <img src="imgs/pasta fundo.png" alt="Pokedex" class="menu-icon" />
+      </a>
+      <a class="menu-item" href="pokedex.html">
+        <img
+          src="./imgs/Captura_de_tela_2026-09-10_201244-removebg-preview.png"
+          alt="Pokedex"
+          class="menu-icon"
+        />
+      </a>
+      <a class="menu-item" href="pokedex.html">
+        <img src="imgs/conta fundo.png" alt="Pokedex" class="menu-icon" />
+      </a>
+      <a class="menu-item" href="pokedex.html" class="menu-icon">Sair</a>
     </nav>
-     
-     <img src="./imgs/Fourdex.webp" class="Fourdex" alt="">
+    <button id="menu-btn">></button>
+    
+    <div class="header">
+    <h2>MENU</h2>
 
-    <div class="divPokemons">
+    <img src="./imgs/Fourdex.webp" class="Fourdex" alt="Fourdex">
 
+    <h2>POKÉMON</h2>
+</div>
+
+    <div class="search-container">
+      <input 
+        type="text" 
+        id="searchPokemon" 
+        placeholder="Pesquisar Pokémon..."
+       >
+       <button type="button">🔍</button>
     </div>
 
-   
-</body>
+  
+    <div class="divPokemons"></div>
+  </body>
 </html>
