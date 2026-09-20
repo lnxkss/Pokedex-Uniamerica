@@ -137,10 +137,33 @@ root {
 }
 
 .divPokemons {
-margin-top: 15%;
-margin-left: 14%;
-width: 1200px;
-min-height: 580px;
-background-color: #e8e8e8;
-border-radius: 2%;
+    margin-top: 15%;
+    margin-left: 14%;
+    width: 1200px;
+    min-height: 580px;
+    background-color: #e8e8e8;
+    border-radius: 2%;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cardPokemon {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardPokemon img {
+    margin-top: -20px;
+    width: 250px;
+}
+
+.cardPokemon h2 {
+    margin-top: -20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
