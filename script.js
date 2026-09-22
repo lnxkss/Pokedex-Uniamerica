@@ -131,6 +131,8 @@ pokemons.forEach(pokemon => {
             <h2>${pokemon.name}</h2>
             <p><strong>Tipo:</strong> ${pokemon.tipo}</p>
             <p><strong>Geração:</strong> ${pokemon.geracao}</p>
+            <p><strong>HP:</strong> ${pokemon.hp}</p>
+            <p><strong>Defesa:</strong> ${pokemon.def}</p>
             <p><strong>Ataque:</strong> ${pokemon.atk}</p>
             <p><strong>Ataque Especial:</strong> ${pokemon.esp}</p>
         </div>
