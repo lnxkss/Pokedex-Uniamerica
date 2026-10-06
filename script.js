@@ -3,7 +3,6 @@ const pokemons = [{
     name: "Bulbasaur",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
     tipo: "Grama - Veneno",
-    geracao: 1,
     hp: 45,
     atk: 49,
     def: 49,
@@ -14,7 +13,6 @@ const pokemons = [{
     name: "Ivysaur",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
     tipo: "Grama - Veneno",
-    geracao: 1,
     hp: 60,
     atk: 62,
     def: 63,
@@ -25,7 +23,6 @@ const pokemons = [{
     name: "Venusaur",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
     tipo: "Grama - Veneno",
-    geracao: 1,
     hp: 80,
     atk: 82,
     def: 83,
@@ -36,7 +33,6 @@ const pokemons = [{
     name: "Charmander",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
     tipo: "Fogo",
-    geracao: 1,
     hp: 39,
     atk: 52,
     def: 43,
@@ -47,7 +43,6 @@ const pokemons = [{
     name: "Charmeleon",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
     tipo: "Fogo",
-    geracao: 1,
     hp: 58,
     atk: 64,
     def: 58,
@@ -58,7 +53,6 @@ const pokemons = [{
     name: "Charizard",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
     tipo: "Fogo - Voador",
-    geracao: 1,
     hp: 78,
     atk: 84,
     def: 78,
@@ -69,7 +63,6 @@ const pokemons = [{
     name: "Squirtle",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
     tipo: "Água",
-    geracao: 1,
     hp: 44,
     atk: 48,
     def: 65,
@@ -80,7 +73,6 @@ const pokemons = [{
     name: "Wartortle",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
     tipo: "Água",
-    geracao: 1,
     hp: 59,
     atk: 63,
     def: 80,
@@ -91,7 +83,6 @@ const pokemons = [{
     name: "Blastoise",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
     tipo: "Água",
-    geracao: 1,
     hp: 79,
     atk: 83,
     def: 100,
@@ -102,7 +93,6 @@ const pokemons = [{
     name: "Pikachu",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
     tipo: "Elétrico",
-    geracao: 1,
     hp: 35,
     atk: 55,
     def: 40,
@@ -113,7 +103,6 @@ const pokemons = [{
     name: "Raichu",
     sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
     tipo: "Elétrico",
-    geracao: 1,
     hp: 60,
     atk: 90,
     def: 55,
@@ -130,7 +119,6 @@ pokemons.forEach(pokemon => {
             <img src="${pokemon.sprite}" alt="${pokemon.name}">
             <h2>${pokemon.name}</h2>
             <p><strong>Tipo:</strong> ${pokemon.tipo}</p>
-            <p><strong>Geração:</strong> ${pokemon.geracao}</p>
             <p><strong>HP:</strong> ${pokemon.hp}</p>
             <p><strong>Defesa:</strong> ${pokemon.def}</p>
             <p><strong>Ataque:</strong> ${pokemon.atk}</p>
