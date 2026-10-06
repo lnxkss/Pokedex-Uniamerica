@@ -1,130 +1,87 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fourdex - Menu de Decks</title>
+    <title>Fourdex - Pastas</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-    <!-- BARRA LATERAL -->
     <nav class="sidebar">
 
-        <!-- Logo -->
-        <a class="menu-item" href="index.html">
-            <img src="imgs/logo.webp" alt="Logo Fourdex" class="logo">
+        <a href="index.html" class="menu-item">
+            <img src="imgs/logo.webp" alt="Logo" class="logo">
         </a>
 
-        <!-- Home -->
-        <a class="menu-item" href="index.html">
+        <a href="index.html" class="menu-item">
             <img src="imgs/home.webp" alt="Home" class="menu-icon">
         </a>
 
-        <!-- Decks -->
-        <a class="menu-item" href="pokedex.html">
-            <img src="imgs/pasta.webp" alt="Decks" class="menu-icon">
+        <a href="PaginaDePastas.html" class="menu-item">
+            <img src="imgs/pasta.webp" alt="Pastas" class="menu-icon">
         </a>
 
-        <!-- Configurações -->
-        <a class="menu-item" href="pokedex.html">
+        <a href="pokedex.html" class="menu-item">
             <img src="imgs/config.webp" alt="Configurações" class="menu-icon">
         </a>
 
-        <!-- Perfil -->
-        <a class="menu-item" href="pokedex.html">
+        <a href="pokedex.html" class="menu-item">
             <img src="imgs/perfil.webp" alt="Perfil" class="menu-icon">
         </a>
 
-        <!-- Sair -->
-        <a class="menu-item sair" href="pokedex.html">
-            <img src="imgs/sair.webp" alt="Sair" class="menu-icon">
+        <a href="pokedex.html" class="menu-item">
+            Sair
         </a>
 
     </nav>
 
+    <button id="menu-btn">☰</button>
 
-    <!-- BOTÃO PARA RECOLHER/ABRIR MENU -->
-    <button id="menu-btn">></button>
-
-
-    <!-- CONTEÚDO PRINCIPAL -->
     <main class="main-content">
 
-        <!-- CABEÇALHO -->
         <header class="header">
 
             <div class="header-title">
-                <h1>MENU DE DECKS</h1>
+                <h1>Pastas</h1>
             </div>
 
             <div class="user-menu">
-                <span>Sou, teste123!</span>
+                <span>Usuário</span>
                 <span class="arrow">⌄</span>
             </div>
 
         </header>
 
-
-        <!-- ÁREA DOS DECKS -->
         <section class="decks-container">
 
-            <!-- DECK 1 - CRIAR NOVO -->
-            <div class="deck">
+            <a href="#" class="deck">
                 <div class="folder">
-                    <span class="plus">+</span>
+                    <div class="plus">+</div>
                 </div>
+                <p>Nova pasta</p>
+            </a>
 
-                <p>Adicionar Deck</p>
-            </div>
+            <a href="#" class="deck">
+                <div class="folder"></div>
+                <p>Pasta 1</p>
+            </a>
 
+            <a href="#" class="deck">
+                <div class="folder"></div>
+                <p>Pasta 2</p>
+            </a>
 
-            <!-- DECK 2 -->
-            <div class="deck">
-                <div class="folder">
-                </div>
-
-                <p>Pokédex</p>
-            </div>
-
-
-            <!-- DECK 3 -->
-            <div class="deck">
-                <div class="folder">
-                </div>
-
-                <p>Pokédex</p>
-            </div>
-
-
-            <!-- DECK 4 -->
-            <div class="deck">
-                <div class="folder">
-                </div>
-
-                <p>Pokédex</p>
-            </div>
+            <a href="#" class="deck">
+                <div class="folder"></div>
+                <p>Pasta 3</p>
+            </a>
 
         </section>
 
     </main>
-    <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const sidebar = document.querySelector(".sidebar");
-    const mainContent = document.querySelector(".main-content");
 
-    menuBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("closed");
-        mainContent.classList.toggle("expanded");
-
-        if (sidebar.classList.contains("closed")) {
-            menuBtn.textContent = "<";
-        } else {
-            menuBtn.textContent = ">";
-        }
-    });
-</script>
 </body>
 </html>
