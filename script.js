@@ -1,123 +1,112 @@
 const pokemons = [{
     id: 1,
     name: "Bulbasaur",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-    tipo: "Grama - Veneno",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    type: "Grass - Poison",
     hp: 45,
-    atk: 49,
-    def: 49,
-    esp: 65
+    attack: 49,
+    defense: 49,
+    special_attack: 65
 },
 {
     id: 2,
     name: "Ivysaur",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
-    tipo: "Grama - Veneno",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+    type: "Grass - Poison",
     hp: 60,
-    atk: 62,
-    def: 63,
-    esp: 80
+    attack: 62,
+    defense: 63,
+    special_attack: 80
 },
 {
     id: 3,
     name: "Venusaur",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
-    tipo: "Grama - Veneno",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+    type: "Grass - Poison",
     hp: 80,
-    atk: 82,
-    def: 83,
-    esp: 100
+    attack: 82,
+    defense: 83,
+    special_attack: 100
 },
 {
     id: 4,
     name: "Charmander",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-    tipo: "Fogo",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+    type: "Fire",
     hp: 39,
-    atk: 52,
-    def: 43,
-    esp: 60
+    attack: 52,
+    defense: 43,
+    special_attack: 60
 },
 {
     id: 5,
     name: "Charmeleon",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
-    tipo: "Fogo",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+    type: "Fire",
     hp: 58,
-    atk: 64,
-    def: 58,
-    esp: 80
+    attack: 64,
+    defense: 58,
+    special_attack: 80
 },
 {
     id: 6,
     name: "Charizard",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
-    tipo: "Fogo - Voador",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+    type: "Fire - Voador",
     hp: 78,
-    atk: 84,
-    def: 78,
-    esp: 109
+    attack: 84,
+    defense: 78,
+    special_attack: 109
 },
 {
     id: 7,
     name: "Squirtle",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-    tipo: "Água",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+    type: "Water",
     hp: 44,
-    atk: 48,
-    def: 65,
-    esp: 50
+    attack: 48,
+    defense: 65,
+    special_attack: 50
 },
 {
     id: 8,
     name: "Wartortle",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
-    tipo: "Água",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+    type: "Water",
     hp: 59,
-    atk: 63,
-    def: 80,
-    esp: 65
+    attack: 63,
+    defense: 80,
+    special_attack: 65
 },
 {
     id: 9,
     name: "Blastoise",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-    tipo: "Água",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+    type: "Water",
     hp: 79,
-    atk: 83,
-    def: 100,
-    esp: 85
+    attack: 83,
+    defense: 100,
+    special_attack: 85
 },
 {
     id: 25,
     name: "Pikachu",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-    tipo: "Elétrico",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    type: "Electric",
     hp: 35,
-    atk: 55,
-    def: 40,
-    esp: 50
+    attack: 55,
+    defense: 40,
+    special_attack: 50
 },
 {
     id: 26,
     name: "Raichu",
-    sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
-    tipo: "Elétrico",
-    geracao: 1,
+    front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+    type: "Electric",
     hp: 60,
-    atk: 90,
-    def: 55,
-    esp: 90
+    attack: 90,
+    defense: 55,
+    special_attack: 90
 },
 ];
 
@@ -127,14 +116,13 @@ pokemons.forEach(pokemon => {
 
     divPokemons.innerHTML += `
         <div class="cardPokemon">
-            <img src="${pokemon.sprite}" alt="${pokemon.name}">
+            <img src="${pokemon.front_default}" alt="${pokemon.name}">
             <h2>${pokemon.name}</h2>
-            <p><strong>Tipo:</strong> ${pokemon.tipo}</p>
-            <p><strong>Geração:</strong> ${pokemon.geracao}</p>
+            <p><strong>Tipo:</strong> ${pokemon.type}</p>
             <p><strong>HP:</strong> ${pokemon.hp}</p>
-            <p><strong>Defesa:</strong> ${pokemon.def}</p>
-            <p><strong>Ataque:</strong> ${pokemon.atk}</p>
-            <p><strong>Ataque Especial:</strong> ${pokemon.esp}</p>
+            <p><strong>Defesa:</strong> ${pokemon.defense}</p>
+            <p><strong>Ataque:</strong> ${pokemon.attack}</p>
+            <p><strong>Ataque Especial:</strong> ${pokemon.special_attack}</p>
         </div>
     `;
 
