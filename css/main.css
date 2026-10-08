@@ -1,8 +1,8 @@
 body {
     background-image: url(../imgs/Fundo.webp);
     min-height: 100vh; 
-    margin: 0; 
-    background-size: cover;
+    margin: 0;
+    background-size: 100%;
     background-position: center;
     background-color: blue;
 }
