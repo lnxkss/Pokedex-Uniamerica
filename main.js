@@ -6,13 +6,13 @@ const sidebar = document.querySelector(".sidebar");
       <a class="menu-item" href="home.html">
         <img src="imgs/home.webp" alt="Pokedex" class="menu-icon"/>
       </a>
-      <a class="menu-item" href="pokedex.html">
+      <a class="menu-item" href="pastas.html">
         <img src="imgs/pasta.webp" alt="Pokedex" class="menu-icon"/>
       </a>
-      <a class="menu-item" href="pokedex.html">
+      <a class="menu-item" href="config.html">
         <img src="imgs/config.webp" alt="Pokedex" class="menu-icon"/>
       </a>
-      <a class="menu-item" href="pokedex.html">
+      <a class="menu-item" href="perfil.html">
         <img src="imgs/perfil.webp" alt="Pokedex" class="menu-icon"/>
       </a>
       <a class="menu-item" href="pokedex.html" class="menu-icon">Sair</a>
