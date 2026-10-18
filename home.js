@@ -118,11 +118,6 @@ pokemons.forEach(pokemon => {
         <div class="cardPokemon">
             <img src="${pokemon.front_default}" alt="${pokemon.name}">
             <h2>${pokemon.name}</h2>
-            <p><strong>Tipo:</strong> ${pokemon.type}</p>
-            <p><strong>HP:</strong> ${pokemon.hp}</p>
-            <p><strong>Defesa:</strong> ${pokemon.defense}</p>
-            <p><strong>Ataque:</strong> ${pokemon.attack}</p>
-            <p><strong>Ataque Especial:</strong> ${pokemon.special_attack}</p>
         </div>
     `;
 
