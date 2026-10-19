@@ -1,8 +1,19 @@
+html {
+    overflow: hidden;
+}
+
 .fundo {
-    background-image: url(../imgs/detalhes.png);
+    background-color: #b80115;
     margin-left: 100px;
-    height: 700px;
-    background-size: 100%;
-    width: calc(100% - 100px);
-    margin-top: -17px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.headerD {
+    width: 100%;
+    height: 100%;
+    position: fixed;
 }
