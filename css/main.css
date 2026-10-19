@@ -79,12 +79,11 @@ root {
 }
 
 .nomePagina {
-    width: 140px;
+    width: 170px;
     height: 100vh;
     margin-left: 50px;
     display: flex;
     justify-content: center;
-    margin-right: 30px;
 }
 
 .NomePasta {
