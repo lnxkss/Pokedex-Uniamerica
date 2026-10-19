@@ -76,19 +76,22 @@ root {
     flex-direction: row;
     align-items: center;
     margin-left: 50px;
+    background-color: pink;
 }
 
 .nomePagina {
-    width: 170px;
+    width: 140px;
     height: 100vh;
     margin-left: 50px;
     display: flex;
     justify-content: center;
+    margin-right: 30px;
+    background-color: blue;
 }
 
-.NomePasta {
+.NomePagP {
     font-size: 25px;
-    margin-top: 45px;
+    margin-top: 105px;
     color: white;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     -webkit-text-stroke: 0.5px black;
@@ -101,5 +104,7 @@ root {
     display: flex;
     justify-content: start;
     align-items: center;
+    flex-grow: 1;
+    background-color: green;
 }
 
