@@ -89,7 +89,7 @@ body {
 
 .perfil-topo p {
     margin: 0;
-    font-size: 25px;
+    font-size: 22px;
 }
 .linha {
     width: 100%;
@@ -225,5 +225,9 @@ body {
     font-size: 18px;
     padding: 6px 6px;
     margin-top: 6px;
+}
+.btn a{
+    text-decoration: none;
+    color: #000000;
 }
 
