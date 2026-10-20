@@ -57,6 +57,7 @@ html {
     position: fixed;
     object-fit: cover;
     opacity: 0.5;
+    pointer-events: none;
 }
 
 .descricao {
@@ -113,4 +114,5 @@ html {
     opacity: 1;
     width: 100%;
     margin: 0;
+    pointer-events: none;
 }
