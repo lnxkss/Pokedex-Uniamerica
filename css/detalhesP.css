@@ -25,6 +25,7 @@ html {
     height: 100%;
     position: fixed;
     pointer-events: none;
+    z-index: 100;
 }
 
 .fundoCor {
@@ -46,6 +47,16 @@ html {
     justify-content: start;
     align-items: center;
     background-color: #b80115;
+    z-index: 10;
+}
+
+.fundoAlt {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    object-fit: cover;
+    opacity: 0.5;
 }
 
 .descricao {
@@ -54,15 +65,52 @@ html {
     height: 70%;
     margin-left: 150px;
     margin-top: 50px;
-    border-radius: 15px;
+    border-radius: 10px;
     border-style: solid;
     display: flex;
     justify-content: start;
     flex-direction: column;
+    align-items: start;
+    overflow-y: auto;
+    scrollbar-color: #0c5c13 #51ae5f;
+}
+
+.descT {
+    width: 100%;
+    font-size: 100%;
+    font-family: pixel;
+    text-align: center;
+}
+
+.descC {
+    margin-left: 20px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.descC p {
+    font-size: 150%;
+    font-family: pixel;
+    margin: 7px;
+}
+
+.spriteP {
+    margin-bottom: 10%;
+    margin-left: 15%;
+    background-color: #dedede;
+    width: 21%;
+    height: 60%;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.descricao p {
-    font-size: 200%;
-    font-family: pixel;
+.spriteP img {
+    opacity: 1;
+    width: 100%;
+    margin: 0;
 }
