@@ -14,7 +14,7 @@ async function carregarPoke() {
 
     descricaoP.innerHTML = `
     <div class="descT">
-        <h1>${dados.name}</h1>
+        <h1>${dados.name} (${dados.id})</h1>
     </div>
     <div class="descC">
         <p><strong>HP:</strong> ${dados.stats[0].base_stat}</p>
