@@ -81,6 +81,7 @@ html {
     font-size: 100%;
     font-family: pixel;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .descC {
@@ -95,6 +96,7 @@ html {
     font-size: 150%;
     font-family: pixel;
     margin: 7px;
+    text-transform: capitalize;
 }
 
 .spriteP {
