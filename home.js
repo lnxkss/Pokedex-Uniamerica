@@ -41,8 +41,7 @@ divPokemons.addEventListener("click", function(event) {
 });
 
 const carregarMais = document.querySelector(".carregarM");
-
-carregarMais.addEventListener("click", function() {
-    contador++;
-    carregarPokes();
+    carregarMais.addEventListener("click", function() {
+        contador++;
+        carregarPokes();
 });
