@@ -67,6 +67,7 @@ root {
 
 .menu-icon {
     width: 60px;
+    border-radius: 20px;
 }
 
 .telaRow {
