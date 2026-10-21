@@ -72,7 +72,7 @@
 }    
 
 
-/* ALTERAÇÃO: posiciona os dois botões à direita */
+
 .botoes-idioma {
     display: flex;
     gap: 10px;
@@ -82,7 +82,7 @@
 
 }
 
-/* ALTERAÇÃO: estilo das duas caixinhas */
+
 .botoes-idioma button {
     background-color: white;
     border: 2px solid #efefef;
@@ -93,7 +93,7 @@
     
 }
 
-/* ALTERAÇÃO: efeito ao passar o mouse */
+
 .botoes-idioma button:hover {
     
     border-color: rgb(179, 178, 178);
