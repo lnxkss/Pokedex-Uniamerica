@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fourdex - Home</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+
+  </head>
+  <body>
+    <nav class="sidebar"></nav>
+
+    <div class="tela">
+    <header class="header">
+    <h2><u>MENU</u></h2>
+    <img src="./imgs/Fourdex.webp" class="Fourdex" alt="Fourdex">
+    
+    <div  class="criarConta">
+      <div>
+          <img src="imgs/perfil.webp" alt="">
+       </div>
+      <button id="cadastrar-se"><u>CADASTRAR-SE</u></button>
+
+    </div>
+
+    </header>
+
+     <dialog id="modalLogin">
+      <img src="./imgs/logo.webp" alt="FourDex Logo" class="modal-logo">
+      <button id="botaoFechar" class="close-x-btn">&times;</button>
+       <div><h2>Bem-vindo!</h2></div>
+
+    <form id="loginForm">
+    <div class="form-group">
+      <input type="email" id="email" placeholder="EMAIL" required>
+    </div>
+   
+    <div class="form-group">
+      <div class="inputImg">
+        <img src="imgs/olhoAberto.webp" alt="">
+      <input type="password" id="senha" placeholder="SENHA" required>
+      </div>
+       <a href="">Esqueci minha senha</a>
+    </div>
+
+    <div>
+    <button type="submit" class="btn-enviar">ENVIAR</button>
+    
+    </div>
+
+    <div class="crieConta">
+      <p>Não tem uma conta ainda? <a href="">Crie uma</a></p>
+    </div>
+  </form>
+      </dialog>
+
+    <main>
+    <div class="search-container">
+      <input 
+        type="text" 
+        id="searchPokemon" 
+        placeholder="Pesquisar Pokémon..."
+       >
+       <button type="button">🔍</button>
+    </div>
+  
+    <div class="divPokemons"></div>
+    </main>
+
+  </div>
+    <script src="home.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

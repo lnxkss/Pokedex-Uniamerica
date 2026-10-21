@@ -1,0 +1,8 @@
+.fundo {
+    background-image: url(../imgs/detalhes.png);
+    margin-left: 100px;
+    height: 700px;
+    background-size: 100%;
+    width: calc(100% - 100px);
+    margin-top: -17px;
+}
