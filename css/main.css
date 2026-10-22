@@ -108,3 +108,20 @@ root {
     flex-grow: 1;
 }
 
+
+.sidebar {
+    transition: width 0.3s ease;
+}
+
+.sidebar.aberta {
+    width: 230px;
+}
+
+.menu-text {
+    display: none;
+    white-space: nowrap;
+}
+
+.sidebar.aberta .menu-text {
+    display: inline;
+}
