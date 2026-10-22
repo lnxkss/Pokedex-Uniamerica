@@ -33,6 +33,7 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 20px;
 }
 
 .search-container {
@@ -87,6 +88,30 @@ main {
     gap: 20px;
     padding: 20px;
     box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+}
+
+.carregarM {
+    order: 9999;
+    width: 73%;
+    height: 80px;
+    grid-column: 1 / 5;
+    font-size: 150%;
+    border-radius: 10px;
+    color: #18009f;
+    transition: all 0.1s ease-in-out;
+    border-bottom: 200px;
+    border: solid #2c2727;
+    border-width: 1px;
+}
+
+.carregarM:hover {
+    transition: all 0.1s ease-in-out;
+    transform: scale(1.025);
+    font-size: 170%;
+    cursor: pointer;
+    color: #f5d313;
+    text-shadow: 1px 1px 2px rgba(12, 12, 12, 0.5);
 }
 
 .cardPokemon {
@@ -98,6 +123,8 @@ main {
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.1s ease-in-out;
+    position: relative;
+    flex-shrink: 1;
 }
 
 .cardPokemon:hover {
@@ -115,7 +142,17 @@ main {
 
 .cardPokemon h2 {
     font-family: montserrat;
-    margin-bottom: -10px;
+    margin-bottom: -5%;
+    text-transform: capitalize;
+}
+
+.cardPokemon p {
+    font-size: 20px;
+    position: relative;
+    margin: 0;
+    top: 0%;
+    left: -45%;
+    margin-bottom: -30px;
 }
 
 .telaColumn {
