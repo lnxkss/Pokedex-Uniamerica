@@ -175,6 +175,38 @@ modalCadastro.addEventListener('click', function(event) {
     }
 });
 
+
+const botaoEsqueciSenha = document.querySelector("#RecuperarSenha_Btn");
+const botaoFecharRecuperar = document.querySelector("#botaoFecharRecuperar");
+const modalRecuperarSenha = document.querySelector("#modalRecuperarSenha");
+const recuperarSenhaForm = document.querySelector("#RecuperarSenhaForm");
+
+botaoEsqueciSenha.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    modalLogin.close();     
+    modalRecuperarSenha.showModal(); 
+});
+
+botaoFecharRecuperar.addEventListener("click", () => {
+    modalRecuperarSenha.close();
+});
+
+modalRecuperarSenha.addEventListener('click', function(event) {
+    const rect = modalRecuperarSenha.getBoundingClientRect();
+    const clicouFora = (
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    );
+    if (clicouFora) {
+        modalRecuperarSenha.close();
+    }
+});
+
+
+
+
 const olhos = document.querySelectorAll('.inputImg img');
 
 olhos.forEach(imagemOlho => {
