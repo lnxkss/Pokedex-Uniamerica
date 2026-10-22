@@ -17,7 +17,7 @@ body {
   font-style: normal;
 }
 
-root {
+:root {
     --cor-text: #2c2727;
     --secondary-text: #ffff;
 }
@@ -86,7 +86,7 @@ root {
     justify-content: center;
 }
 
-.NomePasta {
+.nomePagP {
     font-size: 25px;
     margin-top: 45px;
     color: white;
