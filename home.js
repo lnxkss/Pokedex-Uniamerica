@@ -78,19 +78,13 @@ const carregarMais = document.querySelector(".carregarM");
 
                 const pokePesquisados = document.querySelector(".pesquisando");
                 pokePesquisados.innerHTML += `
+                    <a href="detalhesP.html?id=${dados.id}" style="text-decoration: none; color: black;">
                     <div class="pokemonPesquisado">
                     <img src="${dados.sprites.front_default}" alt="">
                     <p>${dados.name}</p>
                     </div>
+                    </a>
                 `;
-
-                const poke = document.querySelector(".divPokemon");
-
-                    divPokemons.addEventListener("click", function(event) {
-                    const pokeClicado = (event.target.closest(".cardPokemon").dataset.id);
-                    window.location.href = `detalhesP.html?id=${pokeClicado}`
-                    });
-
                 }
                 p();
             });
