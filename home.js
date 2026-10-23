@@ -70,9 +70,24 @@ const carregarMais = document.querySelector(".carregarM");
                 return nome.name.includes(input.value);
             });
 
+            const pesquisarButton = document.getElementById("pesquisarButton");
+            const respostaP = await fetch(`https://pokeapi.co/api/v2/pokemon/${resultado[0].name}`);
+            const dadosP = await respostaP.json();
+
+            pesquisarButton.addEventListener("click", function() {
+            window.location.href = `detalhesP.html?id=${dadosP.id}`
+        });
+           
+        input.addEventListener("keydown", function(enter) {
+        if (enter.key === "Enter") {
+        window.location.href = `detalhesP.html?id=${dadosP.id}`
+            }
+        });
+
+
 
             resultado.slice(0, 5).forEach(pokemon => {
-                async function p() {
+                async function resposta() {
                     const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
                     const dados = await resposta.json();
 
@@ -86,7 +101,7 @@ const carregarMais = document.querySelector(".carregarM");
                     </a>
                 `;
                 }
-                p();
+                resposta();
             });
         }
 });
