@@ -306,6 +306,7 @@ main {
     height: 65px;
     border:#2c2727 solid 2px;
     border-radius: 16px;
+    position: relative;
 }
 
 .search-container input {
@@ -426,4 +427,45 @@ main {
     flex-direction: column;
     align-items: center;
     margin-left: 50px;
+}
+
+.pesquisando {
+    top: 95%;
+    left: 0%;
+    width: 93.6%;
+    min-height: 50px;
+    background-color: #e8e8e8;
+    border-radius: 2%;
+    display: grid;
+    grid-auto-rows: max-content;
+    box-sizing: border-box;
+    position: absolute;
+    opacity: 0;
+    z-index: 10001;
+}
+
+.pokemonPesquisado {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0px;
+    width: 100%;
+    max-height: 50px;
+    border: solid 1px rgb(131, 131, 131);
+    border-radius: 10px;
+}
+
+.pokemonPesquisado img {
+    width: 50px;
+    margin-left: 20px;
+}
+
+.pokemonPesquisado p {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.search {
+    width: 30px;
 }

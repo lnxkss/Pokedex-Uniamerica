@@ -58,8 +58,7 @@
     <div>
        <h2>Esqueceu sua senha?</h2>
        <p>Digite um email para enviarmos um código de confirmação:</p>
-    </div>
-  
+     
     <form id="RecuperarSenhaForm">
       <div class="form-group">
         <input type="email" id="email-recuperar" placeholder="EMAIL" required>
@@ -106,10 +105,22 @@
 
 
       <main>
-        <div class="search-container">
-          <input type="text" id="searchPokemon" placeholder="Pesquisar Pokémon...">
-          <button type="button">🔍</button>
-        </div>
+    <div class="search-container">
+      <input 
+        type="text" 
+        id="pesquisaPokemon" 
+        placeholder="Pesquisar Pokémon..."
+       >
+       <div id="pesquisarButton">
+       <button type="button">
+        <img class="search" src="https://cdn-icons-png.flaticon.com/512/3183/3183361.png" alt="🔍">
+       </button>
+       </div>
+       <div class="pesquisando">
+
+       </div>
+    </div>
+
         <div class="divPokemons"></div>
     <button class="carregarM">Carregar mais Pokémons</button>
     </div>
@@ -118,12 +129,6 @@
   </main>
 
   </div>
-
-    
-       <div id="toast-sucesso" class="toast">
-         <span class="icon">✅</span>
-        <span class="mensagem">Ação realizada com sucesso!</span>
-       </div>
        
     <script src="main.js"></script>
     <script src="home.js"></script>
