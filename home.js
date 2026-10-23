@@ -83,6 +83,14 @@ const carregarMais = document.querySelector(".carregarM");
                     <p>${dados.name}</p>
                     </div>
                 `;
+
+                const poke = document.querySelector(".divPokemon");
+
+                    divPokemons.addEventListener("click", function(event) {
+                    const pokeClicado = (event.target.closest(".cardPokemon").dataset.id);
+                    window.location.href = `detalhesP.html?id=${pokeClicado}`
+                    });
+
                 }
                 p();
             });
