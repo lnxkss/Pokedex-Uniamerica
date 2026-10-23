@@ -39,7 +39,7 @@
               <img src="imgs/olhoAberto.webp" alt="">
               <input type="password" id="senha" placeholder="SENHA" required>
             </div>
-            <a href="">Esqueci minha senha</a>
+            <button id="RecuperarSenha_Btn"><u>Esqueci minha senha</u></button>
           </div>
 
           <div>
@@ -51,6 +51,25 @@
           </div>
         </form>
       </dialog>
+
+     <dialog id="modalRecuperarSenha">
+       <img src="./imgs/logo.webp" alt="FourDex Logo" class="modal-logo">
+       <button id="botaoFecharRecuperar" class="close-x-btn">&times;</button> 
+    <div>
+       <h2>Esqueceu sua senha?</h2>
+       <p>Digite um email para enviarmos um código de confirmação:</p>
+    </div>
+  
+    <form id="RecuperarSenhaForm">
+      <div class="form-group">
+        <input type="email" id="email-recuperar" placeholder="EMAIL" required>
+      </div>
+      <div>
+        <button type="submit" class="btn-enviar">ENVIAR</button>
+      </div>
+    </form> 
+</dialog>
+
 
          <dialog id="modalCadastro">
         <img src="./imgs/logo.webp" alt="FourDex Logo" class="modal-logo">
@@ -66,13 +85,13 @@
           </div>
           
           <div class="form-group">
-            <input type="email" id="email-cadastro" placeholder="EMAIL" required> <!-- Mudei o ID para não duplicar com o de login -->
+            <input type="email" id="email-cadastro" placeholder="EMAIL" required> 
           </div> 
           
           <div class="form-group">
             <div class="inputImg">
               <img src="imgs/olhoAberto.webp" alt="Mostrar Senha">
-              <input type="password" id="senha-cadastro" placeholder="SENHA" required> <!-- Mudei o ID para não duplicar -->
+              <input type="password" id="senha-cadastro" placeholder="SENHA" required> 
             </div>
           </div>
           
