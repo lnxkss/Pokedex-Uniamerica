@@ -6,7 +6,7 @@
 .perfil {
     width: 71%;
     height: 74%;
-    margin-left: 6%;
+    margin-left: 1%;
     background-color: #e7e7e7;
     border-radius: 15px;
     padding: 2% 2%;
@@ -147,8 +147,4 @@
 .btn:hover {
     cursor: pointer;
     transform: scale(1.025);
-}
-
-.NomePasta{ 
-    color: #18009f;
 }

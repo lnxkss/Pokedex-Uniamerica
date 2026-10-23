@@ -1,8 +1,6 @@
 .editarPerfil {
-      width: 950px;
-    height: 520px;
-    top: 40px;
-    left: 280px;
+    width: 155%;
+    height: 74%;
     background-color: #e7e7e7;
     border-radius: 15px;
     padding: 25px 35px;
@@ -45,6 +43,7 @@
 
 
 .usuario {
+    margin-left: 5%;
     position: absolute;
     top: 235px;
     left: 55%;
