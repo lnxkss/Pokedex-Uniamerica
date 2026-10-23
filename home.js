@@ -46,3 +46,94 @@ carregarMais.addEventListener("click", function() {
     contador++;
     carregarPokes();
 });
+
+ const botaoAbrirLogin = document.querySelector("#cadastrar-se");
+const botaoFecharLogin = document.querySelector("#botaoFecharLogin");
+const modalLogin = document.querySelector("#modalLogin");
+
+const botaoAbrirCadastro = document.querySelector("#crieUmaConta");
+const botaoFecharCadastro = document.querySelector("#botaoFecharCadastro");
+const modalCadastro = document.querySelector("#modalCadastro");
+
+botaoAbrirLogin.addEventListener("click", () => {
+    modalLogin.showModal(); 
+});
+
+botaoFecharLogin.addEventListener("click", () => {
+    modalLogin.close();
+});
+
+modalLogin.addEventListener('click', function(event) {
+    const rect = modalLogin.getBoundingClientRect();
+    const clicouFora = (
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    );
+    if (clicouFora) {
+        modalLogin.close();
+    }
+});
+
+botaoAbrirCadastro.addEventListener("click", () => {
+    modalLogin.close();
+    modalCadastro.showModal();
+});
+
+botaoFecharCadastro.addEventListener("click", () => {
+    modalCadastro.close();
+});
+
+modalCadastro.addEventListener('click', function(event) {
+    const rect = modalCadastro.getBoundingClientRect();
+    const clicouFora = (
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    );
+    if (clicouFora) {
+        modalCadastro.close();
+    }
+});
+
+const olhos = document.querySelectorAll('.inputImg img');
+
+olhos.forEach(imagemOlho => {
+  imagemOlho.addEventListener('click', () => {
+  
+    const container = imagemOlho.closest('.inputImg');
+    const inputSenha = container.querySelector('input');
+
+    if (inputSenha.type === 'password') {
+      inputSenha.type = 'text';
+      imagemOlho.src = 'imgs/olhoAberto.webp';
+      imagemOlho.alt = 'Esconder Senha';
+    } else {
+      inputSenha.type = 'password';
+      imagemOlho.src = 'imgs/olhoFechado.webp';
+      imagemOlho.alt = 'Mostrar Senha';
+    }
+  });
+});
+
+const campos = document.querySelectorAll('input[required]');
+
+campos.forEach(campo => {
+  campo.addEventListener('invalid', function () {
+    if (this.value === '') {
+      this.setCustomValidity('Por favor, preencha este campo.');
+    } else {
+      this.setCustomValidity('');
+    }
+  });
+  campo.addEventListener('input', function () {
+    this.setCustomValidity('');
+  });
+});
+
+
+
+
+
