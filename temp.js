@@ -1,42 +1,50 @@
-        async function arrayPoke() {
-            async function temp() {
-                const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=1&offset=0`);
-                const dados = await resposta.json();
-                return dados.count;
-        }
-        const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${await temp()}&offset=0`);
+async function arrayPoke() {
+        const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=1&offset=0`);
         const dados = await resposta.json();
-        return dados.results;
+
+        const resposta2 = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${dados.count}&offset=0`);
+        const dados2 = await resposta2.json();
+        return dados2.results;
         }
 
+        const listaPoke = arrayPoke();
+        
 
+        
         const input = document.getElementById("pesquisaPokemon");
         input.addEventListener("input", async function() {
-        const listaPoke = await arrayPoke();
+            if (input.value === "") {
+                const pokemonPesquisado = document.querySelector(".pesquisando")
+                pokemonPesquisado.innerHTML = "";
+                pokemonPesquisado.style.opacity = "0";
+            } else {
 
-            const resultado = listaPoke.filter(nome => {
+            const pokemonPesquisado = document.querySelector(".pesquisando")
+            pokemonPesquisado.innerHTML = "";
+                pokemonPesquisado.style.opacity = "1";
+
+            const listaPoke2 = await listaPoke;
+        
+
+            const resultado = listaPoke2.filter(nome => {
                 return nome.name.includes(input.value);
             });
-            console.log(resultado)
 
-            resultado.forEach(pokemon => {
+
+            resultado.slice(0, 5).forEach(pokemon => {
+                async function p() {
+                    const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
+                    const dados = await resposta.json();
+
                 const pokePesquisados = document.querySelector(".pesquisando");
                 pokePesquisados.innerHTML += `
                     <div class="pokemonPesquisado">
-                    <img src="imgs/logo.webp" alt="">
-                    <p>${pokemon.name}</p>
+                    <img src="${dados.sprites.front_default}" alt="">
+                    <p>${dados.name}</p>
                     </div>
                 `;
+                }
+                p();
             });
-        
-
+        }
 });
-
-
-    
-
-
-
-
-
-        

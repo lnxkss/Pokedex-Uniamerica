@@ -28,6 +28,7 @@ async function carregarPoke() {
 const sprite = document.querySelector(".spriteP");
 sprite.innerHTML = `
     <img src="${dados.sprites.front_default}">
+    <button type="button" id="shiny">VER SHINY</button>
 `;
 
     

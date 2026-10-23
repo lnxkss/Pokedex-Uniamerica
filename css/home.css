@@ -172,7 +172,7 @@ main {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 20px;
+    gap: 0px;
     width: 100%;
     max-height: 50px;
     border: solid 1px rgb(131, 131, 131);
@@ -187,4 +187,9 @@ main {
 .pokemonPesquisado p {
     font-size: 20px;
     text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.search {
+    width: 30px;
 }
