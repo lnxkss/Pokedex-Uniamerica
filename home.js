@@ -78,6 +78,15 @@ divPokemons.addEventListener("click", function(event) {
                 return nome.name.includes(input.value);
             });
 
+const pokePesquisados = document.querySelector(".pesquisando");
+            if (resultado[0] == undefined) {
+                pokePesquisados.innerHTML = `
+                    <div class="semCorrespondencia">
+                    <p>Nenhum pokémon corresponde a busca</p>
+                    </div>`
+
+            }
+
             const pesquisarButton = document.getElementById("pesquisarButton");
             const respostaP = await fetch(`https://pokeapi.co/api/v2/pokemon/${resultado[0].name}`);
             const dadosP = await respostaP.json();
@@ -98,8 +107,6 @@ divPokemons.addEventListener("click", function(event) {
                 async function resposta() {
                     const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
                     const dados = await resposta.json();
-
-                const pokePesquisados = document.querySelector(".pesquisando");
                 pokePesquisados.innerHTML += `
                     <a href="detalhesP.html?id=${dados.id}" style="text-decoration: none; color: black;">
                     <div class="pokemonPesquisado">
