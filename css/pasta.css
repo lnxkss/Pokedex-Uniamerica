@@ -1,8 +1,8 @@
 .bg{
     background-color: #e8e8e8;
     width: 80%;
-    height: 500px;
-    margin-left: 140px;
+    height: 50%;
+    margin-left: 140%;
     margin-right: 30px;
     margin-top: 20px;
     border-radius: 20px;
@@ -25,10 +25,10 @@
     border-radius: 15px;
 }
 .quadradao {
-    width: 1100px;
-    min-height: 520px;
-    margin-left: 260px;
-    margin-top: 100px;
+    width: 950px;
+    height: 520px;
+    top: 40px;
+    margin-left:200px;
     background-color: #e7e7e7;
     border-radius: 15px;
     padding: 25px 35px;
@@ -39,7 +39,7 @@
     width: 250px;
     margin-left: 0px;
 }
-.titulop {
+.NomePagP{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-left: 160px;
     margin-top: 50px;
