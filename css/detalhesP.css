@@ -4,7 +4,7 @@ html {
 
 @font-face {
   font-family: 'pixel'; 
-  src: url(fontes/PixelifySans-VariableFont_wght.ttf);
+  src: url(fontes/dogicapixel.otf);
   font-weight: normal;
   font-style: normal;
 }
@@ -82,14 +82,15 @@ html {
     font-family: pixel;
     text-align: center;
     text-transform: capitalize;
+    margin-top: 10px;
 }
 
 .descC {
     margin-left: 20px;
-    margin-top: -10px;
     display: flex;
     justify-content: start;
     flex-direction: column;
+    gap: 10px;
 }
 
 .descC p {
@@ -120,7 +121,7 @@ html {
     pointer-events: none;
 }
 
-#shiny {
+.verShiny {
     position: absolute;
     width: 40%;
     height: 10%;
@@ -131,5 +132,42 @@ html {
     top: 3%;
     left: 58%;
     border-radius: 10px;
-    background-color: gold;
+    background-color: rgb(243, 179, 198);
+    cursor: pointer;
+}
+
+.verNormal {
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3%;
+    left: 48%;
+    border-radius: 10px;
+    background-color: #eeae00;
+    cursor: pointer;
+}
+
+#image {
+    flex-grow: 1;
+}
+
+.normal {
+    padding: 10px;
+    width: max-content;
+    height: 10%;
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: #A8A77A;
+}
+
+.tiposPoke {
+    padding: 10px;
+    width: max-content;
+    height: 10%;
+    font-size: 17px;
+    border-radius: 10px;
 }
