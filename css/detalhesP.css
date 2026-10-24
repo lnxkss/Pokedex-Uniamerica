@@ -94,7 +94,7 @@ html {
 }
 
 .descC p {
-    font-size: 150%;
+    font-size: 140%;
     font-family: pixel;
     margin: 7px;
     text-transform: capitalize;
@@ -105,69 +105,190 @@ html {
     margin-left: 15%;
     background-color: #dedede;
     width: 21%;
-    height: 60%;
     border-style: solid;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    flex-direction: column;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .spriteP img {
-    opacity: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
     width: 100%;
-    margin: 0;
     pointer-events: none;
+    z-index: 0;
 }
 
 .verShiny {
     position: absolute;
-    width: 40%;
-    height: 10%;
-    font-size: 17px;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 3%;
     left: 58%;
     border-radius: 10px;
-    background-color: rgb(243, 179, 198);
+    background-color: rgb(243, 179, 198);;
     cursor: pointer;
+    font-family: pixel;
+    border: solid 1px black;
+    z-index: 10;
 }
 
 .verNormal {
     position: absolute;
-    width: 50%;
-    height: 10%;
-    font-size: 17px;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 3%;
-    left: 48%;
+    left: 53%;
     border-radius: 10px;
-    background-color: #eeae00;
+    background-color: #b3b298;
     cursor: pointer;
+    font-family: pixel;
+    border: solid 1px black;
+    z-index: 10;
 }
 
 #image {
     flex-grow: 1;
 }
 
-.normal {
-    padding: 10px;
-    width: max-content;
-    height: 10%;
-    font-size: 17px;
-    border-radius: 10px;
-    background-color: #A8A77A;
+.divTipos {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    height: 50px;
 }
 
 .tiposPoke {
     padding: 10px;
     width: max-content;
-    height: 10%;
+    height: 45%;
     font-size: 17px;
     border-radius: 10px;
+    border: solid 1px black;
+    margin: 0;
+}
+
+.verVariantes {
+    margin: 0;
+    width: 105%;
+    height: 13%;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4A90E2;
+    cursor: pointer;
+    font-family: pixel;
+    border: solid 1px;
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.verVariantes:hover {
+    margin: 0;
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+    transform-origin: bottom;
+}
+
+.fundoPretoOff {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -10;
+    transition: all 0.5s ease-in-out;
+}
+
+.fundoPretoOn {
+    top: 0;
+    left: 0;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.3;
+    z-index: 10000;
+    transition: all 0.5s ease-in-out;
+}
+
+.modalVerVarOff {
+    pointer-events: none;
+    opacity: 0;
+    z-index: -10;
+    top: 100%;
+    left: 33%;
+    transition: all 0.5s ease-in-out;
+}
+
+.modalVerVarOn {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 35%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    border: solid 3px black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    gap: 5px;
+    z-index: 10000;
+    transition: all 0.5s ease-in-out;
+    scrollbar-color: #0c5c13 #51ae5f;
+}
+
+.cardVar {
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: #dedede;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.cardVar:hover {
+    transition: all 0.1s ease;
+    transform: scale(1.025);
+    margin: 5px;
+}
+
+.cardVar img {
+    margin-left: 10px;
+    width: 22%;
+}
+
+.cardVar h2 {
+    font-size: 23px;
+    font-family: pixel;
+    text-transform: capitalize;
 }

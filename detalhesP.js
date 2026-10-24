@@ -86,8 +86,13 @@ async function carregarPoke() {
 
     });
     const tipos = dados.types.length > 1 
-        ? `s:</strong> </p> <p class="tiposPoke" style="background-color: ${corClasses[0]};">${dados.types[0].type.name}</p> <p class="tiposPoke" style="background-color: ${corClasses[1]}";>${dados.types[1].type.name}` 
-        : `:</strong> </p> <p class="tiposPoke" style="background-color: ${corClasses[0]};">${dados.types[0].type.name}`
+        ? `s:</strong> </p> 
+        <div class="divTipos"><p class="tiposPoke" style="background-color: ${corClasses[0]};">${dados.types[0].type.name}</p>
+        <p class="tiposPoke" style="background-color: ${corClasses[1]}";>${dados.types[1].type.name}</p>
+        </div>` 
+        : `:</strong> </p>
+        <div class="divTipos"><p class="tiposPoke" style="background-color: ${corClasses[0]};">${dados.types[0].type.name}</p>
+        </div>`
 
     descricaoP.innerHTML = `
     <div class="descT">
@@ -95,19 +100,87 @@ async function carregarPoke() {
     </div>
     <div class="descC">
         <p><strong>HP:</strong> ${dados.stats[0].base_stat}</p>
-        <p><strong>Tipo${tipos}</p>
+        <p><strong>Tipo${tipos}
         <p><strong>Ataque:</strong> ${dados.stats[1].base_stat}</p>
         <p><strong>Defesa:</strong> ${dados.stats[2].base_stat}</p>
         <p><strong>Ataque Especial:</strong> ${dados.stats[3].base_stat}</p>
     </div>
 `;
 
+async function arrayPoke() {
+        const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=1&offset=0`);
+        const dados = await resposta.json();
 
-const sprite = document.querySelector(".spriteP");
-sprite.innerHTML += `
-    <button type="button" id="btnSprite" class="verShiny">VER SHINY</button>
-    <div id=image><img src="${dados.sprites.front_default}"></div>
-`;
+        const resposta2 = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${dados.count}&offset=0`);
+        const dados2 = await resposta2.json();
+        return dados2.results;
+        }
+
+        const listaPoke = await arrayPoke();
+        const termoPesquisa = dados.name.split("-")
+        console.log(termoPesquisa)
+
+        const variantes = listaPoke.filter(nome => {
+                return nome.name.includes(termoPesquisa[0]);
+            });
+            if (variantes.length == 1) {
+                const sprite = document.querySelector(".spriteP");
+                sprite.style.height = "60%"
+                sprite.innerHTML += `
+                    <button type="button" id="btnSprite" class="verShiny">VER SHINY</button>
+                    <div id=image><img src="${dados.sprites.front_default}"></div>
+                `;
+            } else {
+                const sprite = document.querySelector(".spriteP");
+                sprite.style.height = "67%"
+                sprite.innerHTML += `
+                    <button type="button" id="btnSprite" class="verShiny">VER SHINY</button>
+                    <div id=image><img src="${dados.sprites.front_default}"></div>
+                    <button type="button" class="verVariantes">VER VARIANTES</button>
+                `;
+
+            const vervarbtn = document.querySelector(".verVariantes");
+            vervarbtn.style.backgroundColor = `${corClasses[0]}`
+            vervarbtn.addEventListener("click", async function() {
+            const fundoP = document.querySelector(".fundoPretoOff")
+            const modal = document.querySelector(".modalVerVarOff")
+
+            variantes.forEach(pokemon => {
+                async function resposta() {
+                    const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
+                    const dados = await resposta.json();
+
+                 modal.innerHTML += `
+                    <div class="cardVar" data-id="${dados.id}">
+                    <img src="${dados.sprites.front_default}" alt="${dados.name}">
+                    <h2>${dados.name}</h2>
+                    </div>`
+                    
+                }
+                resposta();
+            });
+    modal.addEventListener("click", function(event) {
+    const pokeClicado = event.target.closest(".cardVar");
+
+    if (pokeClicado !== null) {
+        window.location.href = `detalhesP.html?id=${pokeClicado.dataset.id}`;
+    }
+});
+
+
+        
+        fundoP.classList.remove("fundoPretoOff")
+        modal.classList.remove("modalVerVarOff")
+
+        modal.style.backgroundColor = `${corClasses[0]}`
+
+        fundoP.classList.add("fundoPretoOn")
+        modal.classList.add("modalVerVarOn")
+            
+        })
+    }
+
+    
 
 const image = document.getElementById("image");
 const btnSprite = document.getElementById("btnSprite");
@@ -130,10 +203,9 @@ btnSprite.addEventListener("click", function() {
         <img src="${dados.sprites.front_default}">
         `
     }
-
-
 })
-}
+};
+
     carregarPoke();
 
 
