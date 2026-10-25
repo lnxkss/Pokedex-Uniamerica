@@ -118,7 +118,6 @@ async function arrayPoke() {
 
         const listaPoke = await arrayPoke();
         const termoPesquisa = dados.name.split("-")
-        console.log(termoPesquisa)
 
         const variantes = listaPoke.filter(nome => {
                 return nome.name.includes(termoPesquisa[0]);
@@ -155,7 +154,7 @@ async function arrayPoke() {
                     <img src="${dados.sprites.front_default}" alt="${dados.name}">
                     <h2>${dados.name}</h2>
                     </div>`
-                    
+
                 }
                 resposta();
             });
@@ -166,16 +165,35 @@ async function arrayPoke() {
         window.location.href = `detalhesP.html?id=${pokeClicado.dataset.id}`;
     }
 });
+        const voltar = document.querySelector(".voltarOff")
 
-
-        
+        voltar.classList.remove("voltarOff")        
         fundoP.classList.remove("fundoPretoOff")
         modal.classList.remove("modalVerVarOff")
 
         modal.style.backgroundColor = `${corClasses[0]}`
-
+        
+        voltar.classList.add("voltarOn")
         fundoP.classList.add("fundoPretoOn")
         modal.classList.add("modalVerVarOn")
+
+        const voltarOn = document.querySelector(".voltarOn");
+        voltarOn.addEventListener("click", function() {
+
+        voltar.classList.remove("voltarOn")
+        fundoP.classList.remove("fundoPretoOn")
+        modal.classList.remove("modalVerVarOn")
+
+
+        voltar.classList.add("voltarOff")        
+        fundoP.classList.add("fundoPretoOff")
+        modal.classList.add("modalVerVarOff")
+        modal.innerHTML = ""
+        })
+
+
+
+
             
         })
     }

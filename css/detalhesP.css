@@ -226,7 +226,7 @@ html {
     position: fixed;
     width: 100%;
     height: 100vh;
-    opacity: 0.3;
+    opacity: 0.5;
     z-index: 10000;
     transition: all 0.5s ease-in-out;
 }
@@ -236,7 +236,7 @@ html {
     opacity: 0;
     z-index: -10;
     top: 100%;
-    left: 33%;
+    left: 34%;
     transition: all 0.5s ease-in-out;
 }
 
@@ -291,4 +291,45 @@ html {
     font-size: 23px;
     font-family: pixel;
     text-transform: capitalize;
+}
+
+.voltarOff {
+    position: fixed;
+    left: -100%;
+    transition: all 0.5s ease;
+}
+
+.voltarOn {
+    position: fixed;
+    transition: all 0.5s ease;
+    left: 8%;
+    top: 20%;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.voltarOn img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+.voltarOn h2 {
+    color: white;
+    margin: 0;
+    font-family: pixel;
+    font-size: 17px;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.voltarOn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transform-origin: right;
 }
