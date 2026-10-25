@@ -60,7 +60,9 @@ divPokemons.addEventListener("click", function(event) {
 
         
         const input = document.getElementById("pesquisaPokemon");
+        input.value = localStorage.getItem("ultimaPesquisa") || "";
         input.addEventListener("input", async function() {
+            localStorage.setItem("ultimaPesquisa", input.value);
             if (input.value === "") {
                 const pokemonPesquisado = document.querySelector(".pesquisando")
                 pokemonPesquisado.innerHTML = "";
