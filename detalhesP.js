@@ -1,6 +1,7 @@
 const link = (window.location.search);
 const parametros = new URLSearchParams(link);
 const pAtuais = parametros.get("id");
+let count;
 
 async function carregarPoke() {
     const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${pAtuais}/`);
@@ -110,8 +111,9 @@ async function carregarPoke() {
 async function arrayPoke() {
         const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=1&offset=0`);
         const dados = await resposta.json();
+        count = dados.count
 
-        const resposta2 = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${dados.count}&offset=0`);
+        const resposta2 = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${count}&offset=0`);
         const dados2 = await resposta2.json();
         return dados2.results;
         }
@@ -227,7 +229,23 @@ btnSprite.addEventListener("click", function() {
     carregarPoke();
 
 
+const anterior = document.getElementById("anterior")
+    if (pAtuais == 1) {
+        anterior.style.display = "none"
+    } else {
+        anterior.addEventListener("click", function() {
+        window.location.href = `detalhesP.html?id=${pAtuais - 1}`;
+    })
+}
 
 
+const prox = document.getElementById("prox")
+if (pAtuais == count) {
+    prox.style.display = "none"
+} else {
+    prox.addEventListener("click", function() {
+        window.location.href = `detalhesP.html?id=${+pAtuais + 1}`;
+    })
+}
 
 
