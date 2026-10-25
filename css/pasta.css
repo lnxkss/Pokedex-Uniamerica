@@ -27,7 +27,7 @@
 .quadradao {
     width: 950px;
     height: 520px;
-    top: 40px;
+    top: 0px;
     margin-left:200px;
     background-color: #e7e7e7;
     border-radius: 15px;
@@ -49,4 +49,86 @@
     -webkit-text-stroke: 0.5px black;
     font-family: 'Arial', sans-serif;
     font-size: 30px;
+}
+
+.quadradao.telaCriar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.telaCriar .pastadecriar {
+    width: 260px;
+    height: auto;
+    margin: 0;
+    box-shadow: none; 
+}
+
+
+.telaCriar .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.telaCriar .colocarNome {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+.telaCriar .input {
+    flex-grow: 1;
+    border: none;
+    border-bottom: 2px solid #000000;
+    background-color: transparent;
+    outline: none;
+    font-size: 20px;
+    padding: 0 5px;
+    height: 30px;
+}
+
+
+.telaCriar .botoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+
+.telaCriar .botaoVoltar, 
+.telaCriar .botaoCriar {
+    width: 160px;
+    height: 52px;
+    background-color: #f1c40f; 
+    border: 2px solid #000000;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2); 
+    transition: all 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.telaCriar .botaoVoltar:active, 
+.telaCriar .botaoCriar:active {
+    transform: translateY(3px);
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
 }

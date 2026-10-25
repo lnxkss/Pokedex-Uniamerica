@@ -1,132 +1,114 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fourdex - Início</title>
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
-  </head>
-  <body>
+</head>
+<body>
     <nav class="sidebar"></nav>
-
-    <div class="telaColumn">
-      <header class="header">
-        <h2><u>MENU</u></h2>
-        <img src="./imgs/Fourdex.webp" class="Fourdex" alt="Fourdex">
-        
-        <div class="criarConta">
-          <div>
-            <img src="imgs/perfil.webp" alt="">
-          </div>
-          <button id="cadastrar-se"><u>CADASTRAR-SE</u></button>
-        </div>
-      </header>
-
-      <dialog id="modalLogin">
-        <img src="./imgs/logo.webp" alt="FourDex Logo" class="modal-logo">
-        <button id="botaoFecharLogin" class="close-x-btn">&times;</button>
-        <div><h2>Bem-vindo!</h2></div>
-
-        <form id="loginForm">
-          <div class="form-group">
-            <input type="email" id="email" placeholder="EMAIL" required>
-          </div>
-         
-          <div class="form-group">
-            <div class="inputImg">
-              <img src="imgs/olhoAberto.webp" alt="">
-              <input type="password" id="senha" placeholder="SENHA" required>
-            </div>
-            <button id="RecuperarSenha_Btn"><u>Esqueci minha senha</u></button>
-          </div>
-
-          <div>
-            <button type="submit" class="btn-enviar">ENVIAR</button>
-          </div>
-
-          <div class="crieConta">
-            <p>Não tem uma conta ainda? <button type="button" id="crieUmaConta">Crie uma</button></p>
-          </div>
-        </form>
-      </dialog>
-
-     <dialog id="modalRecuperarSenha">
-       <img src="./imgs/logo.webp" alt="FourDex Logo" class="modal-logo">
-       <button id="botaoFecharRecuperar" class="close-x-btn">&times;</button> 
-    <div>
-       <h2>Esqueceu sua senha?</h2>
-       <p>Digite um email para enviarmos um código de confirmação:</p>
-    </div>
-  
-    <form id="RecuperarSenhaForm">
-      <div class="form-group">
-        <input type="email" id="email-recuperar" placeholder="EMAIL" required>
-      </div>
-      <div>
-        <button type="submit" class="btn-enviar">ENVIAR</button>
-      </div>
-    </form> 
-</dialog>
-
-
-         <dialog id="modalCadastro">
-        <img src="./imgs/logo.webp" alt="FourDex Logo" class="modal-logo">
-        <button id="botaoFecharCadastro" class="close-x-btn">&times;</button>
-        <div>
-          <h2>É novo por aqui?</h2>
-          <p>CRIE UMA CONTA:</p>
-        </div>
-        
-        <form id="cadastroForm">
-          <div class="form-group">
-            <input type="text" id="nome" placeholder="NOME" required>
-          </div>
-          
-          <div class="form-group">
-            <input type="email" id="email-cadastro" placeholder="EMAIL" required> 
-          </div> 
-          
-          <div class="form-group">
-            <div class="inputImg">
-              <img src="imgs/olhoAberto.webp" alt="Mostrar Senha">
-              <input type="password" id="senha-cadastro" placeholder="SENHA" required> 
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <input type="number" id="numero" placeholder="NÚMERO" required>
-          </div>
-          <div>
-            <button type="submit" class="btn-enviar">CADASTRAR-SE</button>
-          </div>
-        </form> 
-      </dialog>
-
-
-      <main>
-        <div class="search-container">
-          <input type="text" id="searchPokemon" placeholder="Pesquisar Pokémon...">
-          <button type="button">🔍</button>
-        </div>
-        <div class="divPokemons"></div>
-      </main>
-    </div>
-  
-    <div class="divPokemons"></div>
-    <button class="carregarM">Carregar mais Pokémons</button>
-  </main>
-
-  </div>
-
     
-       <div id="toast-sucesso" class="toast">
-         <span class="icon">✅</span>
+    <div class="telaColumn">
+        <header class="header">
+            <h2><u>MENU</u></h2>
+            <img src="./imgs/Fourdex.webp" class="Fourdex" alt="Fourdex">
+            <div class="criarConta">
+                <div>
+                    <img src="imgs/perfil.webp" alt="">
+                </div>
+                <button id="cadastrar-se"><u>CADASTRAR-SE</u></button>
+            </div>
+        </header>
+        <dialog id="modalLogin">
+            <img src="./imgs/logo.webp" alt="FourDex Logo" class="modal-logo">
+            <button id="botaoFecharLogin" class="close-x-btn">&times;</button>
+            <div><h2>Bem-vindo!</h2></div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="EMAIL" required>
+                </div>
+                <div class="form-group">
+                    <div class="inputImg">
+                        <img src="imgs/olhoAberto.webp" alt="">
+                        <input type="password" id="senha" placeholder="SENHA" required>
+                    </div>
+                    <button id="RecuperarSenha_Btn" type="button"><u>Esqueci minha senha</u></button>
+                </div>
+                <div>
+                    <button type="submit" class="btn-enviar">ENVIAR</button>
+                </div>
+                <div class="crieConta">
+                    <p>Não tem uma conta ainda? <button type="button" id="crieUmaConta">Crie uma</button></p>
+                </div>
+            </form>
+        </dialog>
+
+        <dialog id="modalRecuperarSenha">
+            <img src="./imgs/logo.webp" alt="FourDex Logo" class="modal-logo">
+            <button id="botaoFecharRecuperar" class="close-x-btn">&times;</button>
+            <div>
+                <h2>Esqueceu sua senha?</h2>
+                <p>Digite um email para enviarmos um código de confirmação:</p>
+            </div>
+            <form id="RecuperarSenhaForm">
+                <div class="form-group">
+                    <input type="email" id="email-recuperar" placeholder="EMAIL" required>
+                </div>
+                <div>
+                    <button type="submit" class="btn-enviar">ENVIAR</button>
+                </div>
+            </form>
+        </dialog>
+
+        <dialog id="modalCadastro">
+            <img src="./imgs/logo.webp" alt="FourDex Logo" class="modal-logo">
+            <button id="botaoFecharCadastro" class="close-x-btn">&times;</button>
+            <div>
+                <h2>É novo por aqui?</h2>
+                <p>CRIE UMA CONTA:</p>
+            </div>
+            <form id="cadastroForm">
+                <div class="form-group">
+                    <input type="text" id="nome" placeholder="NOME" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email-cadastro" placeholder="EMAIL" required>
+                </div>
+                <div class="form-group">
+                    <div class="inputImg">
+                        <img src="imgs/olhoAberto.webp" alt="Mostrar Senha">
+                        <input type="password" id="senha-cadastro" placeholder="SENHA" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="numero" placeholder="NÚMERO" required>
+                </div>
+                <div>
+                    <button type="submit" class="btn-enviar">CADASTRAR-SE</button>
+                </div>
+            </form>
+        </dialog>
+        <main>
+            <div class="search-container">
+                <input type="text" id="searchPokemon" placeholder="Pesquisar Pokémon...">
+                <button type="button">🔍</button>
+            </div>
+            
+            <div class="divPokemons"></div>
+            
+            <button class="carregarM">Carregar mais Pokémons</button>
+        </main>
+    </div>
+
+    <div id="toast-sucesso" class="toast">
+        <span class="icon">✅</span>
         <span class="mensagem">Ação realizada com sucesso!</span>
-       </div>
-       
+    </div>
+
     <script src="main.js"></script>
     <script src="home.js"></script>
-  </body>
+</body>
 </html>
