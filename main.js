@@ -9,7 +9,7 @@ const sidebar = document.querySelector(".sidebar");
       <a class="menu-item" href="pastas.html">
         <img src="imgs/pasta.webp" alt="Pokedex" class="menu-icon"/>
       </a>
-      <a class="menu-item" href="config.html">
+      <a class="menu-item" href="ajustes.html">
         <img src="imgs/config.webp" alt="Pokedex" class="menu-icon"/>
       </a>
       <a class="menu-item" href="perfil.html">
