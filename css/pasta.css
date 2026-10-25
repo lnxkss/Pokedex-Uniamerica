@@ -27,8 +27,7 @@
 .quadradao {
     width: 950px;
     height: 520px;
-    top: 0px;
-    margin-left:200px;
+    top: 40px;
     background-color: #e7e7e7;
     border-radius: 15px;
     padding: 25px 35px;
@@ -61,14 +60,12 @@
     margin-right: auto;
 }
 
-
 .telaCriar .pastadecriar {
     width: 260px;
     height: auto;
     margin: 0;
     box-shadow: none; 
 }
-
 
 .telaCriar .input-container {
     display: flex;
@@ -86,7 +83,6 @@
     white-space: nowrap;
 }
 
-
 .telaCriar .input {
     flex-grow: 1;
     border: none;
@@ -98,7 +94,6 @@
     height: 30px;
 }
 
-
 .telaCriar .botoes-container {
     display: flex;
     justify-content: center;
@@ -106,7 +101,6 @@
     margin-top: 15px;
     width: 100%;
 }
-
 
 .telaCriar .botaoVoltar, 
 .telaCriar .botaoCriar {
@@ -125,7 +119,6 @@
     align-items: center;
     justify-content: center;
 }
-
 
 .telaCriar .botaoVoltar:active, 
 .telaCriar .botaoCriar:active {
