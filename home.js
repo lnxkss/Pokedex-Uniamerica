@@ -84,7 +84,7 @@ const pokePesquisados = document.querySelector(".pesquisando");
                     <div class="semCorrespondencia">
                     <p>Nenhum pokémon corresponde a busca</p>
                     </div>`
-
+                return;
             }
 
             const pesquisarButton = document.getElementById("pesquisarButton");

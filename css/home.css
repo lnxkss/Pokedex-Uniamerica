@@ -25,6 +25,7 @@
     height: 20%;
     display: flex;
     align-items: center;
+    gap: 10px;
     background-color: #dfdfdf;
     border-radius: 10px;
     padding-right: 10px;
