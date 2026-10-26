@@ -98,3 +98,34 @@
     transform: translateY(3px);
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 768px) {
+    .quadradao {
+        width: 100%;
+        height: auto;
+        min-height: 350px;
+        padding: 20px;
+    }
+
+    .criacaodepastas,
+    .telaCriar .pastadecriar {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .telaCriar .input-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .telaCriar .input {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .telaCriar .botoes-container {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}

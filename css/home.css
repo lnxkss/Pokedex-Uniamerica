@@ -15,7 +15,6 @@
     
 }
 
-
 .Fourdex {
     width: 500px;
     margin: 0;
@@ -318,7 +317,8 @@ main {
 .search-container {
     display: flex;
     align-items: center;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     height: 65px;
     border:#2c2727 solid 2px;
     border-radius: 16px;
@@ -358,8 +358,8 @@ main {
 }
 
 .divPokemons {
-    width: 1000px;
-    min-height: 580px;
+    width: 100%;
+    max-width: 1000px;
     background-color: #e8e8e8;
     border-radius: 2%;
 
@@ -373,7 +373,8 @@ main {
 
 .carregarM {
     order: 9999;
-    width: 73%;
+    width: 100%;
+    max-width: 1000px;
     height: 80px;
     grid-column: 1 / 5;
     font-size: 150%;
@@ -503,4 +504,94 @@ main {
   color: #686868;
   font-size: 20px;
   font-family: montserrat;
+}
+
+@media (max-width: 768px) {
+
+    .telaColumn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .Fourdex {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .criarConta {
+        height: auto;
+    }
+
+    .criarConta p {
+        font-size: 16px;
+    }
+
+    .divPokemons {
+        width: 95%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .cardPokemon {
+        min-width: 0;
+        padding: 10px;
+    }
+
+    .cardPokemon img {
+        width: 100%;
+        max-width: 140px;
+        margin: 0;
+    }
+
+    .cardPokemon h2 {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+        text-align: center;
+    }
+
+    .cardPokemon p {
+        font-size: 12px;
+        left: auto;
+        margin: 0;
+    }
+
+    .search-container {
+        width: 95%;
+        height: 55px;
+    }
+
+    .search-container input {
+        height: 55px;
+        min-width: 0;
+    }
+
+    .search-container button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .carregarM {
+        width: 95%;
+        height: 55px;
+        font-size: 16px;
+    }
+
+    #modalLogin,
+    #modalCadastro,
+    #modalRecuperarSenha {
+        width: 90%;
+        height: auto;
+        max-height: 85vh;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
 }
