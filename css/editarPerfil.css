@@ -1,9 +1,8 @@
 .editarPerfil {
-    position: absolute;
-    width: 1250px;
-    height: 620px;
-    top: 40px;
-    left: 250px;
+    width: 950px;
+    height: 580px;
+    margin-top: 70px;
+    margin-left: 25%;
     background-color: #e7e7e7;
     border-radius: 15px;
     padding: 25px 35px;
