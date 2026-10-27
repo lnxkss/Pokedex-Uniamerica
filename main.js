@@ -15,6 +15,8 @@ const sidebar = document.querySelector(".sidebar");
       <a class="menu-item" href="perfil.html">
         <img src="imgs/perfil.webp" alt="Pokedex" class="menu-icon"/>
       </a>
-      <a class="menu-item" href="pokedex.html" class="menu-icon">Sair</a>
-      <button id="menu-btn">></button>
+      <a class="menu-item" href="sair.html">
+        <img src="imgs/sair.webp" style="width: 100%; margin-top: -20px; opacity: 0.4 ;" alt="Pokedex" class="menu-icon"/>
+      </a>
+      
     `;
