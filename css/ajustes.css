@@ -22,9 +22,9 @@
     height: 170px;
     background-color: #e7e7e7;
     border-radius: 50%;
-   flex-shrink: 0;
-   margin-top: -13%;
-   margin-bottom: -3%;
+    flex-shrink: 0;
+    margin-top: -13%;
+    margin-bottom: -3%;
     
 }
 
@@ -60,6 +60,7 @@
     margin-bottom: auto;
     margin-top: auto;
     margin-left: 2%;
+
     
     
 
@@ -69,6 +70,7 @@
     width: 100%;
     height: 85%;
     border-radius: 90%;
+    
 }    
 
 
@@ -99,4 +101,142 @@
     border-color: rgb(179, 178, 178);
 }
 
+.quadrado{
+    width: 35%;
+    height: 80%;
+    background-color: white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -100;
+    transition: opacity 0.3s ease-in-out;
+    
+}
 
+.circulo2{
+    width: 170px;
+    height: 170px;
+    background-color: white;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: -15%;
+    margin-bottom: -15%;
+    
+}
+
+.circulo2 img {
+    width: 100%;
+    height: 95%;
+    border-radius: 90%;
+    
+}
+
+.fonte{
+    font-family: montserrat;
+    font-size: 200%;
+    text-align: center;
+    margin-top: -10%;
+    
+
+}
+
+.botao button {
+    width: 130px;
+    height: 60px;
+    font-size: 130%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.3); 
+    transition: all 0.2s ease-in-out;
+    border: solid 2px #000000;
+}
+
+.botao button:hover {
+    transform: scale(1.05);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.botao button:active {
+    transform: scale(0.9);
+}
+
+.botao button:first-child {
+    background-color: #51ae5f;
+}
+
+.botao button:last-child {
+    background-color: #ff3131;
+}
+
+.botao {  
+    justify-content: space-around;
+    display: flex;
+    gap: 70px;
+    margin-bottom: 100px;
+    margin-top: -100px;
+    
+    
+    
+    
+  }
+
+.ajusta {
+   
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preto {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: -100;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pretoE {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 1000;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.quadradoE {
+    width: 35%;
+    height: 80%;
+    background-color: white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 1001;
+    transition: opacity 0.3s ease-in-out;
+}
