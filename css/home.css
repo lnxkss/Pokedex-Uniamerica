@@ -1,6 +1,6 @@
 .header {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     gap: 150px;
     height: 270px;
