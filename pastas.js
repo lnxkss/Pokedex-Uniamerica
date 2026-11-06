@@ -12,10 +12,16 @@ function carregarPastas() {
     `
 if (arrayPastas !== null) {
     arrayPastas.forEach(pasta => {
+        let nomeTrun = ""
+        if (pasta.length > 35) {
+            nomeTrun = pasta.substring(0, 40) + "..."
+        } else {
+            nomeTrun = pasta
+        }
         pastas.innerHTML += `
             <article class="pastas" id="${id}">
             <img src="imgs/Pastas.webp" alt="Pasta" width="215px"/>
-            <h2>${pasta}</h2>
+            <h2>${nomeTrun}</h2>
             <button type="button" class="reticencias">...</button>
             </article>
         `
