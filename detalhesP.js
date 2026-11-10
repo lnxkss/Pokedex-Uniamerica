@@ -224,6 +224,12 @@ btnSprite.addEventListener("click", function() {
         `
     }
 })
+
+const addP = document.getElementById("addP")
+addP.addEventListener("click", function() {
+    window.location.href = `pastas.html?id=${dados.id}`;
+})
+
 };
 
     carregarPoke();
@@ -247,5 +253,3 @@ if (pAtuais == count) {
         window.location.href = `detalhesP.html?id=${+pAtuais + 1}`;
     })
 }
-
-
