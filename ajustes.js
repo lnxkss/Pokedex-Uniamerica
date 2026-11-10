@@ -1,11 +1,3 @@
-const btnPerfil = document.getElementById('btn-perfil');
-
-function irParaOutraTela() {
-    
-    window.location.href = "perfil.html"; 
-    
-}
-
 const certo = document.getElementById("excluir")
 
 certo.addEventListener("click", function() {
@@ -21,9 +13,10 @@ certo.addEventListener("click", function() {
 
 const simnao = document.querySelectorAll(".botao2")
 
-simnao.addEventListener("click", function(){
-    const janela = document.querySelector(".quadrado")
-    const porta = document.querySelector(".preto")
+simnao.forEach(botao => {
+    botao.addEventListener("click", function(){
+    const janela = document.querySelector(".quadradoE")
+    const porta = document.querySelector(".pretoE")
 
     
     janela.classList.remove("quadradoE")
@@ -33,5 +26,26 @@ simnao.addEventListener("click", function(){
     porta.classList.add("preto")
  
 })
+});
 
+
+
+const perfil = document.getElementById("btn-perfil")
+perfil.addEventListener("click", function(){
+    window.location.href = "perfil.html";
+})
+
+function mudarIdioma(idioma) {
+    const botoes = document.querySelectorAll('.botoes-idioma button');
+
+    botoes.forEach(botao => {
+        botao.classList.remove('ativo');
+    });
+
+    if (idioma === 'pt') {
+        botoes[0].classList.add('ativo');
+    } else {
+        botoes[1].classList.add('ativo');
+    }
+}
 
