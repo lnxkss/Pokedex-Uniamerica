@@ -1,257 +1,244 @@
-.editarPerfil {
-    width: 950px;
-    height: 580px;
-    margin-top: 70px;
-    margin-left: 25%;
+:root {
+    --cor-text: #2c2727;
+    --secondary-text: #ffff;
+}
+
+.perfil {
+    width: 71%;
+    height: 74%;
+    margin-left: 6%;
     background-color: #e7e7e7;
     border-radius: 15px;
-    padding: 25px 35px;
+    padding: 2% 2%;
     box-sizing: border-box;
     box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.5);
 }
 
-.perfil-topo h1 {
-    font-size: 26px;
-     font-family: "Segoe UI";
-    font-weight: 500;
-    color: #000000;
-
-
-    
-}
-
 .perfil-topo p {
     margin: 0;
-    font-size: 22px;
-    font-family: "Segoe UI";
-    font-weight: 400;
-    color: #000000;
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
+.perfil-topo1 p {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 .linha {
     width: 100%;
-    height: 2px;
+    height: 0.5%;
     background-color: #999;
-    margin-top: 4px;
 }
 
-.linha-vertical {
-    position: absolute;
-    width: 2px;
-    height: 460px;
-    background-color: #999;
-    top: 140px;
-    left: 65%;
+.perfil-conteudo {
+    display: flex;
+    margin-top: 2%;
+    height: 80%;
 }
 
+.dados {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.dados h2{
+    margin: 0;
+    color: #333;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Arial', sans-serif;
+    margin-top: 3%;
+}
 
 
 .usuario {
-    position: absolute;
-    top: 150px;
-    left: 870px;
-    width: 350px;
+    width: 32%;
+    border-left: 3px solid #999;
     text-align: center;
-    padding: 0;
-    border-left: none;
+    padding-left: 2%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.usuario p {
-    font-size: 30px;
+.usuario p{
+    font-size: 25px;
     text-transform: uppercase;
-    margin: 15px 0;
-    font-family: "Segoe UI";
-    font-weight: 700;
-    color: #eae70c;
-    -webkit-text-stroke: 0.5px #000000;
-    text-shadow: -1px 1px 5px rgb(0, 0, 0);
 }
 
 .usuario a {
-    display: inline-block;
-    margin-top: 100px;
-    padding: 8px 16px;
+    margin-top: 20%;
+    padding: 3% 6%;
     color: #18009f;
     text-decoration: none;
-    font-size: 18px;
-    font-family: Arial, sans-serif;
+    font-size: 120%;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
     text-shadow: 1px 1px 2px rgba(16, 51, 203, 0.5);
+    transition: all 0.1s ease-in-out;
 }
+
 .usuario a:hover {
-    font-size: 20px;
-    color: #FFFF;
-     text-shadow: 1px 1px 2px rgba(12, 12, 12, 0.5);
-
+    color: #f5d313;
+    text-shadow: 1px 1px 2px rgba(12, 12, 12, 0.5);
+    transform: scale(1.025);
 }
-
-
 
 .foto-usuario {
-    width: 130px;
-    height: 130px;
+    width: 70%;
+    height: 35%;
     background-color: #b1aaaad6;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 110px;
     box-shadow: 0px 0px 10px rgba(154, 143, 143, 0.5);
-
 }
+
 .foto-usuario img {
-    width: 90px;
-    height: 90px;
-}
-    
+    width: 60%;
+    height: 70%;
+}    
 
-
-.Lapis img {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: -130px;  
-    left: 90px;   
-}
-.TypeText{
+.informacao{
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 100px;
-    margin-left: 10px;
-    width: 500px;
-    font-family: "Segoe UI Light", sans-serif;
-}
-
-.TypeText input{
-    height: 40px;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    border: 2px solid #070707;
-    border-radius: 5px;
-    
-}
-
-
-
-
-.campo h2 {
-    width: 100px;
+    flex-direction: row;;
+    margin-top: 9%;
+    margin-bottom: 4%;
     font-size: 20px;
-    margin: 0;
-    text-transform: uppercase;
-}
-.campo {
-    width: 900px;
+    color: #000000;
+    font-family: 'Arial', sans-serif;
     display: flex;
-    align-items: center;
-    gap: 50px;
-
+    justify-content: center;
+    flex-direction: column;
 }
 
-.campo input {
-    width: 600px;
-    height: 40px;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    border: 2px solid #070707;
-    border-radius: 5px;
+.informacao p{
+    margin-top: 0%;
+    margin-left: 0%;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;   
 }
-
-
-
-.Lapis-campo {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: -2px;  
-    right: 90px;
-}
-.Lapis-campo:hover {
-    width: 33px;
-    height: 33px;
-    position: relative;
-    top: -2px;  
-    right: 90px;
-}
-
-.informacoes h2{
-    margin-top: 600;
-}
-
-
-
 
 .botoes {
+    margin-bottom: 6%;
     display: flex;
-    margin-left: 250px;
-    margin-top: 60px;
-    gap: 40px;
+    justify-content: center;
+    gap: 6%;
+    width: 100%;
+    height: 5%;
 }
 
 .btn {
-    border-radius: 10px;
     background-color: #edc519;
-     border: 2px solid black;
-     box-shadow: -2px 6px 8px rgba(0, 0, 0, 0.5);
-    padding: 5px 25px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px 6px 8px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     height: 50px;
-}
-.btn a{
-    text-decoration: none;
-    color: #000000;
+    font-size: 100%;
+    padding: 3%;
+    transition: all 0.1s ease-in-out;
 }
 
 .btn:hover {
-    position: relative;
-    background-color: #edc619c5;
-    height: 52px;
-    padding: 6px 26px;
-    box-shadow: -2px 6px 8px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transform: scale(1.025);
 }
 
-.btn p {
-    font-size: 18px;
-    padding: 6px 6px;
-    margin-top: 6px;
+@media (max-width: 768px) {
+    .perfil {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .perfil-conteudo {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .dados h2 {
+        margin-left: 0;
+        font-size: 26px;
+    }
+
+    .usuario {
+        width: 100%;
+        border-left: none;
+        border-top: 2px solid #999;
+        padding: 20px 0;
+    }
+
+    .botoes {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .informacao p {
+        overflow-wrap: anywhere;
+    }
+
+    .barra-dados {
+        width: 0%;
+        height: 0%;
+    }
+}
+
+.retangulo {
+    width: 80%;
+    height: 60%;
+    background-color: white;
+    border-radius: 10px;  
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    
+
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+
+
+}
+
+.barra p {
+    font-size: 150%;
+}
+
+.org {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.retangulo input{
+    width: 100%;
+    border-radius: 5px;
+    border: solid 2px;
+    padding-left: 10px;
+
+}
+
+.lapis {
+    background-color: #e7e7e7;
+    width: 10%;
+    height: 3rem;
 }
 
 
-
-.btnExcluir a{
-    text-decoration: none;
-    color: #000000;
-}
-.btnExcluir {
-    border-radius: 10px;
-    background-color: #ed1919;
-     border: 2px solid black;
-     box-shadow: -2px 6px 8px rgba(0, 0, 0, 0.5);
-    padding: 5px 25px;
-    border-radius: 10px;
-    height: 50px;
-}
-.btnExcluir a{
-    text-decoration: none;
-    color: #000000;
-}
-
-.btnExcluir:hover {
-    position: relative;
-    background-color: #dd4343;
-    height: 52px;
-    padding: 6px 26px;
-    box-shadow: -2px 6px 8px rgba(0, 0, 0, 0.7);
-}
-
-.btnExcluir p {
-    font-size: 18px;
-    padding: 6px 6px;
-    margin-top: 6px;
-}
-.btn a{
-    text-decoration: none;
-    color: #000000;
-}
