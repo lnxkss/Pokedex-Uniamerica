@@ -70,7 +70,6 @@ botoes.forEach(btn => {
         const input = artigo.querySelector("input")
         input.addEventListener("input", function(){
             inp = input.value
-    
         })
 
         const btnR = artigo.querySelector("button")
