@@ -3,10 +3,16 @@ const pastas = document.getElementById("folders");
 let stringPastas = localStorage.getItem("arrayPastas")
 let arrayPastas = JSON.parse(stringPastas);
 
+const parametros = new URLSearchParams(window.location.search);
+if (parametros.size !== 0) {
+    const pAtuais = parametros.get("id");
+    
+}
+
 function carregarPastas() {
     let id = 0
     pastas.innerHTML = `
-    <a href="criarPastas.html">
+    <a href="criarPastas.html" class="criacaodepastas">
     <img src="imgs/CriacaoDePastas.webp" alt="Pokedex" class="criacaodepastas">
     </a>
     `

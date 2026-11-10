@@ -1,15 +1,3 @@
-.pasta{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    gap: 20px;
-}
-.pasta img{
-    width: 275px;
-    box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-}
 .quadradao {
     width: 950px;
     height: 520px;
@@ -26,7 +14,16 @@
 }
 
 .criacaodepastas {
+    height: max-content;
+    width: max-content;
+    display: inline-block;
+}
+
+.criacaodepastas img {
+    display: block;
     width: 215px;
+    height: auto;
+    pointer-events: none;
 }
 
 .pastas {
@@ -76,6 +73,7 @@
 }
 
 .pastaRet input {
+    padding-left: 10px;
     width: 80%;
     height: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -156,6 +154,43 @@
     max-width: 80%;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#folders a {
+    display: inline-block;
+}
+
+.qualPasta {
+    margin-left: 50px;
+    position: fixed;
+    width: 70%;
+    height: 15%;
+    background-color: #d3d3d3;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    border: #464646 3px solid;
+    border-radius: 15px;
+}
+
+.qualPasta h1 {
+    margin-left: 20px;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: montserrat;
+    color: #464646;
+}
+
+.qualPasta p {
+    font-size: 30px;
+    margin-bottom: 35px;
+    font-family: montserrat;
+    color: #464646;
 }
 
 .quadradao.telaCriar {
