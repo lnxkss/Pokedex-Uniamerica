@@ -1,0 +1,70 @@
+.divPokemons {
+    width: 100%;
+    min-height: 80%;
+    max-width: 90%;
+    background-color: #e8e8e8;
+    border-radius: 2%;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+}
+
+.divPokemons h1 {
+    font-size: 400%;
+    margin: auto;
+    margin-left: 280%;
+    opacity: 0.5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    white-space: nowrap;
+}
+
+.cardPokemon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in-out;
+    position: relative;
+    flex-shrink: 1;
+    height: 150px;
+}
+
+.cardPokemon:hover {
+    transform: scale(1.1);
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+
+.cardPokemon img {
+    margin: -35px;
+    margin-top: -20px;
+    width: 140px;
+    pointer-events: none;
+}
+
+.cardPokemon h2 {
+    font-family: montserrat;
+    margin-top: 15%;
+    margin-bottom: -10%;
+    text-transform: capitalize;
+    text-align: center;
+    background-color: #e8e8e8;
+    font-size: 20px;
+}
+
+.cardPokemon p {
+    font-size: 20px;
+    position: relative;
+    margin: 0;
+    top: 0%;
+    left: -45%;
+    margin-bottom: -30px;
+    background-color: #e8e8e8;
+}

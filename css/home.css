@@ -1,6 +1,6 @@
 .header {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     gap: 150px;
     height: 270px;
@@ -9,14 +9,14 @@
 .header h2 {
     margin: 0;
     margin-left: 20px;
+    margin-right: 80px;
     color: white;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     -webkit-text-stroke: 0.5px black;
     font-family: 'Arial', sans-serif;
-    
 }
 
-.Fourdex {
+.header img {
     width: 500px;
     margin: 0;
 }
@@ -32,6 +32,7 @@
     padding-left: 10px;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
+    margin: 0;
 }
 
 .criarConta img {
