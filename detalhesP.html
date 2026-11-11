@@ -9,33 +9,23 @@
 </head>
 <body>
     <nav class="sidebar"></nav>
-        <div class="telaRow">
+    <div class="telaRow">
         <img class="headerD" src="imgs/headerImg.webp" alt="">
 
-        
         <div class="fundoCor">
-            
-
             <div class="fundoDetalhes">
-            <img src="imgs/fundoAlt.webp" class="fundoAlt">
-            <div class="descricao">
-                
+                <img src="imgs/fundoAlt.webp" class="fundoAlt">
+                <div class="descricao">
+                </div>
 
-            </div>
-
-            <div class="spriteP">
-                <div class="addPasta">
-                    <p id="addP">Adicionar a pasta?</p>
+                <div class="spriteP">
+                    <div class="addPasta">
+                        <p id="addP">Adicionar a pasta?</p>
+                    </div>
                 </div>
             </div>
-
-            
-
         </div>
-        </div>
-
-
-        </div>
+    </div>
 
     <div class="fundoPretoOff"></div>
     <div class="modalVerVarOff"></div>
@@ -56,8 +46,21 @@
         </button>
     </div>
 
+    <div class="gtranslate_wrapper"></div>
 
     <script src="main.js"></script>
     <script src="detalhesP.js"></script>
+    <script src="traducaoAPI.js"></script>
+
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "pt",
+            "native_language_names": true,
+            "languages": ["pt", "en"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "alt_flags": { "en": "usa", "pt": "brazil" }
+        };
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
 </body>
 </html>

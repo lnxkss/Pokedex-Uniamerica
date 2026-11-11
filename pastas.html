@@ -5,21 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fourdex - Pastas</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/pasta.css"/>
+    <link rel="stylesheet" href="css/pasta.css">
 </head>
-
 <body>
-<nav class="sidebar"></nav>
-<div class="telaRow">
+    <nav class="sidebar"></nav>
+    
+    <div class="telaRow">
+        <div class="nomePagina">
+            <h2 class="nomePagP"><u>Menu Pastas</u></h2>
+        </div>
+        
+        <div class="conteudo">
+            <div main class="quadradao" id="folders"></div>
+        </div>
+    </div>
 
-  <div class="nomePagina">
-    <h2 class="nomePagP"><u>Menu Pastas</u></h2>
-  </div>
-      <div class="conteudo">
-        <div main class="quadradao" id="folders"></div>
-</div>
+    <div class="gtranslate_wrapper"></div>
 
     <script src="main.js"></script>
     <script src="pastas.js"></script>
+    <script src="traducaoAPI.js"></script>
+
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "pt",
+            "native_language_names": true,
+            "languages": ["pt", "en"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "alt_flags": { "en": "usa", "pt": "brazil" }
+        };
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
 </body>
 </html>

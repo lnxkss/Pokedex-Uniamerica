@@ -6,46 +6,48 @@
     <title>Ajustes</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/ajustes.css">
+    <style>
+        .gtranslate_wrapper, #goog-gt-tt, .skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0 !important;
+        }
+    </style>
 </head>
 <body>
-         <nav class="sidebar"></nav>
+    <div class="gtranslate_wrapper"></div>
 
-         <div class="telaRow">
+    <nav class="sidebar"></nav>
 
+    <div class="telaRow">
         <div class="nomePagina">
             <h2 class="nomePagP"><u>Ajustes</u></h2>
         </div>
 
-       <div class="conteudo">
+        <div class="conteudo">
             <div class="fundo">
-
                 <div class="circulo">
                     <img src="imgs/configP.webp" alt="">
                 </div>
                 
                 <div class="retangulo" role="button" tabindex="0" id="btn-perfil">
                     <img src="imgs/perfil.webp" alt="">
-
                     <p>Perfil</p>
                 </div>
-
-
                 
-<div class="retangulo idioma">
-    <img src="imgs/convert.webp" alt="">
-    <p>Idioma</p>
-
-    
-    <div class="botoes-idioma">
-        <button onclick="mudarIdioma('pt')">PT</button>
-        <button onclick="mudarIdioma('en')">EN</button>
-    </div>
-</div>
-
+                <div class="retangulo idioma">
+                    <img src="imgs/convert.webp" alt="">
+                    <p>Idioma</p>
+                    
+                    <div class="botoes-idioma">
+                        <button onclick="mudarIdioma('pt')">PT</button>
+                        <button onclick="mudarIdioma('en')">EN</button>
+                    </div>
+                </div>
 
                 <div class="retangulo">
                     <img src="imgs/sol.webp" alt="">
-                    
                     <p>Aparência</p>
                 </div>
 
@@ -53,24 +55,18 @@
                     <img src="imgs/sair.webp" style="opacity: 0.5;" alt="">
                     <p>Excluir conta</p>
                 </div>
-
             </div>
-
         </div>
-
-
     </div>
 
     <div class="quadrado">
-
-        
         <div class="circulo2">
             <img src="imgs/logo.webp" alt="">
-
         </div>
 
         <div class="ajusta">
-        <p class="fonte">Tem certeza de quer <br>  excluir sua conta</p></div>
+            <p class="fonte">Tem certeza de quer <br> excluir sua conta</p>
+        </div>
 
         <div class="botao">
             <button type="button" class="botao2">Sim</button>
@@ -80,12 +76,18 @@
 
     <div class="preto"></div>
 
+    <script src="ajustes.js"></script>
+    <script src="main.js"></script>
 
-
-
-
-        <script src="ajustes.js"></script>
-
-         <script src="main.js"></script>
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "pt",
+            "native_language_names": true,
+            "languages": ["pt", "en"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "alt_flags": { "en": "usa", "pt": "brazil" }
+        }
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
 </body>
 </html>

@@ -8,29 +8,37 @@
     <link rel="stylesheet" href="css/excluirC.css">
 </head>
 <body>
-
     <nav class="sidebar"></nav>
 
     <div class="quadrado">
-
-        
         <div class="circulo2">
             <img src="imgs/logo.webp" alt="">
-
         </div>
 
         <div class="ajusta">
-        <p class="fonte">Tem certeza de quer <br>  excluir sua conta</p></div>
+            <p class="fonte">Tem certeza de quer <br> excluir sua conta</p>
+        </div>
 
         <div class="botao">
             <button type="button">Sim</button>
             <button type="button">Não</button>
-
         </div>
     </div>
- 
 
-         <script src="main.js"></script>
+    <div class="gtranslate_wrapper"></div>
 
+    <script src="main.js"></script>
+    <script src="traducaoAPI.js"></script>
+
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "pt",
+            "native_language_names": true,
+            "languages": ["pt", "en"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "alt_flags": { "en": "usa", "pt": "brazil" }
+        };
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
 </body>
 </html>

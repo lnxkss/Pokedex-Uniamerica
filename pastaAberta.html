@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fourdex - Pasta</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/inPasta.css">
 </head>
@@ -15,23 +15,31 @@
             <h2 class="nomePagP"><u>Nome da<br> Página</u></h2>
         </div>
 
-
-
-
         <div class="conteudo">
             <main class="divPokemons">
                 <div class="cardPokemon" data-id="${pokemon.id}">
-                <p>13</p>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png" alt="${pokemon.name}">
-                <h2>Nome do Pokemon</h2>
-            </div>
+                    <p>13</p>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png" alt="${pokemon.name}">
+                    <h2>Nome do Pokemon</h2>
+                </div>
             </main>
-
-
         </div>
+    </div>
 
-
+    <div class="gtranslate_wrapper"></div>
 
     <script src="main.js"></script>
+    <script src="traducaoAPI.js"></script>
+
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "pt",
+            "native_language_names": true,
+            "languages": ["pt", "en"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "alt_flags": { "en": "usa", "pt": "brazil" }
+        };
+    </script>
+    <script src="https://gtranslate.net" defer></script>
 </body>
 </html>
