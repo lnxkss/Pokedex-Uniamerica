@@ -7,6 +7,8 @@ const parametros = new URLSearchParams(window.location.search);
 if (parametros.size !== 0) {
     const pAtuais = parametros.get("id");
     
+    const qualPasta = document.querySelector(".qualPasta")
+    qualPasta.style.display = "flex"
 }
 
 function carregarPastas() {

@@ -169,12 +169,12 @@
     top: 88%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
     justify-content: start;
     align-items: center;
     gap: 20px;
     border: #464646 3px solid;
     border-radius: 15px;
+    display: none;
 }
 
 .qualPasta h1 {
