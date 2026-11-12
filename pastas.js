@@ -1,15 +1,11 @@
 const pastas = document.getElementById("folders");
+const parametros = new URLSearchParams(window.location.search);
+const pAtuais = parametros.get("id");
+
+let contador = 0
 
 let stringPastas = localStorage.getItem("arrayPastas")
 let arrayPastas = JSON.parse(stringPastas);
-
-const parametros = new URLSearchParams(window.location.search);
-if (parametros.size !== 0) {
-    const pAtuais = parametros.get("id");
-    
-    const qualPasta = document.querySelector(".qualPasta")
-    qualPasta.style.display = "flex"
-}
 
 function carregarPastas() {
     let id = 0
@@ -21,22 +17,36 @@ function carregarPastas() {
 if (arrayPastas !== null) {
     arrayPastas.forEach(pasta => {
         let nomeTrun = ""
-        if (pasta.length > 35) {
-            nomeTrun = pasta.substring(0, 40) + "..."
+        if (pasta.nome.length > 35) {
+            nomeTrun = pasta.nome.substring(0, 40) + "..."
         } else {
-            nomeTrun = pasta
+            nomeTrun = pasta.nome
         }
         pastas.innerHTML += `
             <article class="pastas" id="${id}">
-            <img src="imgs/Pastas.webp" alt="Pasta" width="215px"/>
+            <img src="https://www.freeiconspng.com/thumbs/check-mark-png/check-mark-png-black-transparent-18.png" alt="Ok" class="check" draggable="false">
+            <img src="imgs/Pastas.webp" alt="Pasta" class="pastaApenas" draggable="false"/>
             <h2>${nomeTrun}</h2>
             <button type="button" class="reticencias">...</button>
             </article>
         `
         id++;
+
+        if (pAtuais == null) {
+       const artigos = pastas.querySelectorAll('article')
+       artigos.forEach(article => {
+        article.addEventListener("click", function() {
+            window.location.href = `inPasta.html?id=${article.id}`
+        })
+        
+       });
+    }
     });
 }
 
+localStorage.setItem("arrayPastas", JSON.stringify(arrayPastas))
+
+if (parametros.size == 0) {
 const botoes = document.querySelectorAll(".reticencias")
 botoes.forEach(btn => {
     btn.addEventListener("click", function(event) {
@@ -83,7 +93,7 @@ botoes.forEach(btn => {
         const btnR = artigo.querySelector("button")
         btnR.addEventListener("click", function(){
             if (inp !== "") {
-            arrayPastas[Number(artigo.id)] = inp
+            arrayPastas[Number(artigo.id)].nome = inp
             localStorage.setItem("arrayPastas", JSON.stringify(arrayPastas))
             carregarPastas();
             }
@@ -102,8 +112,67 @@ botoes.forEach(btn => {
     })    
 });
 }
+}
 
 carregarPastas();
 
+if (parametros.size !== 0) {
+    
+    const qualPasta = document.querySelector(".qualPasta")
+    qualPasta.style.display = "flex"
 
+    if (arrayPastas !== null) {
+        const pastasTodas = document.querySelectorAll(".pastas")
 
+        pastasTodas.forEach(pasta => {
+
+            function eventListenerLa() {
+                const quantasSelecionadas = qualPasta.querySelector("h1")
+
+                const check = pasta.querySelector(".check")
+                check.addEventListener("click", eventListenerLa)
+
+                if (pastaImg.classList.contains('pastaSelecionada')) {
+                    pastaImg.classList.remove('pastaSelecionada')
+                    pastaImg.classList.add('pastaApenas')
+                    check.style.opacity = "0"
+                    check.style.zIndex = "-1"
+                    contador--;
+                    quantasSelecionadas.textContent = `[ ${contador} ]`
+
+                } else {
+                    pastaImg.classList.remove('pastaApenas')
+                    pastaImg.classList.add('pastaSelecionada')
+                    check.style.opacity = "0.5"
+                    check.style.zIndex = "11"
+                    contador++
+                    quantasSelecionadas.textContent = `[ ${contador} ]`
+
+                }
+            }
+
+            const pastaImg = pasta.querySelector(".pastaApenas")
+            pastaImg.addEventListener("click", eventListenerLa)
+
+        });
+    }
+
+    const confirmar = qualPasta.querySelector("button")
+    confirmar.addEventListener("click", function() {
+        const pastasSelecionadas = document.querySelectorAll(".pastaSelecionada")
+        pastasSelecionadas.forEach(pasta => {
+            const idAtual = pasta.closest('article').id
+            arrayPastas[idAtual].id = idAtual;
+
+            if (arrayPastas[idAtual].pokemons.includes(pAtuais)) {
+                alert("Esse pokémon já está em " + arrayPastas[idAtual].nome)
+            } else {
+            arrayPastas[idAtual].pokemons.push(pAtuais)
+            console.log(arrayPastas[idAtual])
+            }
+        });
+        localStorage.setItem("arrayPastas", JSON.stringify(arrayPastas))
+
+        window.location.href = 'pastas.html'
+})
+}

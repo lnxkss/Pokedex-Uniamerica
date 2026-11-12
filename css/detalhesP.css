@@ -144,18 +144,25 @@ html {
     border: 3px solid black;
 }
 
+.addPasta img {
+    width: 25px;
+    margin-right: 20px;
+    margin-left: -25px;
+}
+
 .addPasta:hover {
     cursor: pointer;
 }
 
 .addPasta p{
+    line-height: 1.3;
     text-align: center;
     font-size: 17px;
     font-family: pixel;
     margin-bottom: 40px;
     cursor: pointer;
     text-transform: uppercase;
-    margin-top: 12%;
+    margin-top: 13%;
 }
 
 .verShiny {
@@ -375,12 +382,14 @@ html {
     right: 2%;
     width: 90%;
     height: 70px;
-    z-index: 100;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
+    pointer-events: none;
 }
 
 .mover button {
+    pointer-events: all;
     color: white;
     width: 80px;
     background: none;
