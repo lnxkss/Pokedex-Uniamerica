@@ -1,7 +1,9 @@
 let inp = "";
+const criar = document.querySelector(".botaoCriar"); 
+
 const input = document.querySelector("input");
 input.addEventListener("input", function() {
-    inp = input.value;
+    inp = input.value.trim();
 });
 
 input.addEventListener("keydown", function(event){
@@ -10,13 +12,20 @@ input.addEventListener("keydown", function(event){
             }
         })
 
-const criar = document.querySelector(".botaoCriar"); 
-criar.addEventListener("click", function() {
-    let stringPastas = localStorage.getItem("arrayPastas")
 
-        let arrayPastas = stringPastas ? JSON.parse(stringPastas) : [];   
-        arrayPastas.push(inp)
+criar.addEventListener("click", function() {
+    if (inp !== "") {
+        let pastaAgora = {
+            nome: inp,
+            id: null,
+            pokemons: []
+        }
+
+        let stringPastas = localStorage.getItem("arrayPastas")
+        let arrayPastas = JSON.parse(stringPastas) || [];   
+        arrayPastas.push(pastaAgora)
 
         localStorage.setItem("arrayPastas", JSON.stringify(arrayPastas))
         window.location.href = "pastas.html"
+    }
 });

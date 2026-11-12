@@ -101,10 +101,19 @@ html {
     text-transform: capitalize;
 }
 
-.spriteP {
-    margin-bottom: 10%;
-    background-color: #dedede;
+.containerImg {
     width: 21%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.spriteP {
+    background-color: #dedede;
+    width: 100%;
+    height: 100%;
     border-style: solid;
     border-radius: 10px;
     display: flex;
@@ -125,32 +134,35 @@ html {
 }
 
 .addPasta {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.2s ease;
-    opacity: 0;
+    background-color: #dedede;
+    width: 100%;
+    height: 10%;
+    border-radius: 8px;
+    border: 3px solid black;
+}
+
+.addPasta img {
+    width: 25px;
+    margin-right: 20px;
+    margin-left: -25px;
 }
 
 .addPasta:hover {
-    transition: all 0.2s ease;
-    backdrop-filter: blur(2px);
-    opacity: 1;
+    cursor: pointer;
 }
 
-.addPasta p {
-    font-size: 25px;
-    font-family: montserrat;
+.addPasta p{
+    line-height: 1.3;
+    text-align: center;
+    font-size: 17px;
+    font-family: pixel;
     margin-bottom: 40px;
-    color: white;
-    text-shadow: -2px 6px 8px rgba(0, 0, 0, 0.7);
     cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 13%;
 }
 
 .verShiny {
@@ -370,12 +382,14 @@ html {
     right: 2%;
     width: 90%;
     height: 70px;
-    z-index: 100;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
+    pointer-events: none;
 }
 
 .mover button {
+    pointer-events: all;
     color: white;
     width: 80px;
     background: none;
