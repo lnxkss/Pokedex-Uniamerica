@@ -1,17 +1,12 @@
-:root {
-    --cor-text: #2c2727;
-    --secondary-text: #ffff;
-}
-
 .perfil {
     width: 71%;
     height: 74%;
     margin-left: 6%;
-    background-color: #e7e7e7;
+    background-color: var(--bg-padrao);
     border-radius: 15px;
     padding: 2% 2%;
     box-sizing: border-box;
-    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 18px var(--shadow);
 }
 
 .perfil-topo p {
@@ -29,7 +24,6 @@
 .linha {
     width: 100%;
     height: 0.5%;
-    background-color: #999;
 }
 
 .perfil-conteudo {
@@ -45,16 +39,6 @@
     justify-content: space-between;
     flex-direction: column;
 }
-
-.dados h2{
-    margin: 0;
-    color: #333;
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Arial', sans-serif;
-    margin-top: 3%;
-}
-
 
 .usuario {
     width: 32%;
@@ -76,7 +60,7 @@
 .usuario a {
     margin-top: 20%;
     padding: 3% 6%;
-    color: #18009f;
+    color: var(--link-blue);
     text-decoration: none;
     font-size: 120%;
     font-family: 'Arial', sans-serif;
@@ -86,20 +70,20 @@
 }
 
 .usuario a:hover {
-    color: #f5d313;
-    text-shadow: 1px 1px 2px rgba(12, 12, 12, 0.5);
+    color:var(--btn-Hover);
+    text-shadow: 1px 1px 2px var(--shadow);
     transform: scale(1.025);
 }
 
 .foto-usuario {
     width: 70%;
     height: 35%;
-    background-color: #b1aaaad6;
+    background-color: var(--bg-padrao);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 10px rgba(154, 143, 143, 0.5);
+    box-shadow: 0px 0px 10px var(--shadow);
 }
 
 .foto-usuario img {
@@ -113,7 +97,7 @@
     margin-top: 9%;
     margin-bottom: 4%;
     font-size: 20px;
-    color: #000000;
+    color: var(--font-Padrao);
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
@@ -137,12 +121,12 @@
 }
 
 .btn {
-    background-color: #edc519;
-    border: 2px solid black;
+    background-color: var(--btn-bg);
+    border: 2px solid var(--border-input);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: -2px 6px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: -2px 6px 8px var(--shadow);
     border-radius: 10px;
     height: 50px;
     font-size: 100%;
@@ -154,6 +138,52 @@
     cursor: pointer;
     transform: scale(1.025);
 }
+.retangulo {
+    width: 80%;
+    height: 60%;
+    background-color: var(--white);
+    border-radius: 10px;  
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    
+
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+
+
+}
+
+.barra p {
+    font-size: 150%;
+}
+
+.org {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.retangulo input{
+    width: 100%;
+    border-radius: 5px;
+    border: solid 2px;
+    padding-left: 10px;
+
+}
+
+.lapis {
+    background-color: var(--bg-padrao);
+    width: 10%;
+    height: 3rem;
+}
+
 
 @media (max-width: 768px) {
     .perfil {
@@ -195,50 +225,5 @@
     }
 }
 
-.retangulo {
-    width: 80%;
-    height: 60%;
-    background-color: white;
-    border-radius: 10px;  
-    display: flex;
-    justify-content: center;
-    margin-right: 20px;
-    
-
-}
-
-.barra {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 30%;
-
-
-}
-
-.barra p {
-    font-size: 150%;
-}
-
-.org {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.retangulo input{
-    width: 100%;
-    border-radius: 5px;
-    border: solid 2px;
-    padding-left: 10px;
-
-}
-
-.lapis {
-    background-color: #e7e7e7;
-    width: 10%;
-    height: 3rem;
-}
 
 

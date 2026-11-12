@@ -10,7 +10,7 @@ body {
     margin: 0;
     background-size: 100%;
     background-position: center;
-    background-color: blue;
+    background-color: var(--bg-padrao);
     overflow-x: hidden;
 }
 
@@ -21,10 +21,6 @@ body {
   font-style: normal;
 }
 
-root {
-    --cor-text: #2c2727;
-    --secondary-text: #ffff;
-}
 
 .sidebar {
     width: 100px;
@@ -32,12 +28,12 @@ root {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #f0f0f0;
+    background-color: var(--bg-padrao);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 45px;
-    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 18px var(--shadow);
     z-index: 1000;
 }
 
@@ -48,7 +44,7 @@ root {
     transform: translate(-50%, -50%);
     font-size: 40px;
     border: none;
-    background-color: rgb(89, 82, 82);
+    background-color: rgb(233, 6, 6);
     border-radius: 20%;
     cursor: pointer;
     z-index: 1000;
@@ -96,9 +92,9 @@ root {
 .nomePagP {
     font-size: 25px;
     margin-top: 105px;
-    color: white;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    -webkit-text-stroke: 0.5px black;
+    color: var(--white);
+    text-shadow: 2px 2px 10px var(--shadow);
+    -webkit-text-stroke: 0.5px var(--black);
     font-family: 'Arial', sans-serif;
 }
 
