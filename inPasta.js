@@ -37,4 +37,5 @@ async function exibirPokemons() {
 
 exibirPokemons();
 
-
+const nomePagP = document.querySelector('.nomePagP')
+nomePagP.innerHTML = `<u>${arrayPastas[pAtuais].nome}</u>`

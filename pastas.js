@@ -31,17 +31,13 @@ if (arrayPastas !== null) {
             </article>
         `
         id++;
-
-        if (pAtuais == null) {
+    });
+    if (pAtuais == null) {
        const artigos = pastas.querySelectorAll('article')
        artigos.forEach(article => {
-        article.addEventListener("click", function() {
-            window.location.href = `inPasta.html?id=${article.id}`
-        })
-        
+        article.addEventListener("click", inPasta)
        });
     }
-    });
 }
 
 localStorage.setItem("arrayPastas", JSON.stringify(arrayPastas))
@@ -51,6 +47,9 @@ const botoes = document.querySelectorAll(".reticencias")
 botoes.forEach(btn => {
     btn.addEventListener("click", function(event) {
         const artigo = event.target.closest('article');
+        event.stopPropagation();
+
+        artigo.removeEventListener("click", inPasta)
         artigo.classList.remove("pastas")
         artigo.classList.add("pastaRet")
         artigo.innerHTML = `
@@ -175,4 +174,8 @@ if (parametros.size !== 0) {
 
         window.location.href = 'pastas.html'
 })
+}
+
+function inPasta() {
+    window.location.href = `inPasta.html?id=${this.id}`
 }
