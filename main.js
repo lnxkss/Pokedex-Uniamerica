@@ -20,3 +20,15 @@ const sidebar = document.querySelector(".sidebar");
       </a>
       
     `;
+
+    const head = document.querySelector("head");
+    head.innerHTML += `
+    <style>
+        .gtranslate_wrapper, #goog-gt-tt, .skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0 !important;
+        }
+    </style>
+    `
