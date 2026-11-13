@@ -75,6 +75,25 @@ html {
     align-items: start;
     overflow-y: auto;
     scrollbar-color: #0c5c13 #51ae5f;
+    position: relative;
+}
+
+.descricao h2 {
+    margin: 0;
+    left: 81%;
+    top: -50px;
+    position: absolute;
+    font-size: 80px;
+    font-weight: lighter;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.descricao:hover h2{
+    transition: all 0.2s ease;
+    opacity: 1;
+    transform: translateY(40px);
 }
 
 .descT {

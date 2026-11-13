@@ -1,13 +1,24 @@
 const link = (window.location.search);
 const parametros = new URLSearchParams(link);
 const pAtuais = parametros.get("id");
+const descricaoP = document.querySelector(".descricao");
+
+const stringFav = localStorage.getItem("stringFav") || "[]"
+const arrayFav = JSON.parse(stringFav)
+
 let count;
+let estrela;
+
+if (arrayFav.includes(pAtuais)) {
+    estrela = "★"
+} else {
+    estrela = "☆"
+}
 
 async function carregarPoke() {
     const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${pAtuais}/`);
     const dados = await resposta.json();
 
-    const descricaoP = document.querySelector(".descricao");
     let corClasses = ["", ""];
 
     dados.types.forEach((tipo, i) => {
@@ -96,6 +107,7 @@ async function carregarPoke() {
         </div>`
 
     descricaoP.innerHTML = `
+    <h2>${estrela}</h2>
     <div class="descT">
         <h1>${dados.name}</h1>
     </div>
@@ -191,14 +203,9 @@ async function arrayPoke() {
         fundoP.classList.add("fundoPretoOff")
         modal.classList.add("modalVerVarOff")
         modal.innerHTML = ""
-        })
-
-
-
-
-            
-        })
-    }
+        })            
+    })
+}
 
     
 
@@ -230,8 +237,26 @@ addP.addEventListener("click", function() {
     window.location.href = `pastas.html?id=${dados.id}`;
 })
 
-};
+const favoritar = descricaoP.querySelector("h2")
+favoritar.addEventListener("click", function() {
+    if (favoritar.textContent == "☆") {
+        favoritar.style.color = "#f5d313"
+        favoritar.textContent = "★"
 
+        arrayFav.push(pAtuais)
+        localStorage.setItem("stringFav", JSON.stringify(arrayFav))
+    } else {
+        favoritar.style.color = "black"
+        favoritar.textContent = "☆"
+        const arrayAtualizado = arrayFav.filter(num => num !== pAtuais)
+        localStorage.setItem("stringFav", JSON.stringify(arrayAtualizado))
+    }
+})
+
+if (arrayFav.includes(pAtuais)) {
+    favoritar.style.color = "#f5d313"
+}
+};
     carregarPoke();
 
 

@@ -13,6 +13,11 @@ function carregarPastas() {
     <a href="criarPastas.html" class="criacaodepastas">
     <img src="imgs/CriacaoDePastas.webp" alt="Pokedex" class="criacaodepastas">
     </a>
+
+    <div class="pastaFav">
+    <img src="imgs/favoritos.webp" alt="Pokedex" class="favoritoApenas" id="favoritos">
+    <h2>Favoritos</h2>
+    </div>
     `
 if (arrayPastas !== null) {
     arrayPastas.forEach(pasta => {
@@ -116,8 +121,8 @@ botoes.forEach(btn => {
 carregarPastas();
 
 if (parametros.size !== 0) {
-    
     const qualPasta = document.querySelector(".qualPasta")
+    const quantasSelecionadas = qualPasta.querySelector("h1")
     qualPasta.style.display = "flex"
 
     if (arrayPastas !== null) {
@@ -126,8 +131,6 @@ if (parametros.size !== 0) {
         pastasTodas.forEach(pasta => {
 
             function eventListenerLa() {
-                const quantasSelecionadas = qualPasta.querySelector("h1")
-
                 const check = pasta.querySelector(".check")
                 check.addEventListener("click", eventListenerLa)
 
@@ -159,6 +162,24 @@ if (parametros.size !== 0) {
     const confirmar = qualPasta.querySelector("button")
     confirmar.addEventListener("click", function() {
         const pastasSelecionadas = document.querySelectorAll(".pastaSelecionada")
+        const favoritoSelecionado = document.querySelector(".favoritoSelecionado")
+
+        if (favoritoSelecionado !== null) {
+            const stringFav = localStorage.getItem("stringFav") || "[]";
+            let arrayFav;
+
+            if (stringFav.length > 0) {
+                arrayFav = JSON.parse(stringFav)
+            }
+
+            if (arrayFav.includes(pAtuais)) {
+                alert("Esse pokémon já está em Favoritos")
+            } else {
+            arrayFav.push(pAtuais)
+            localStorage.setItem("stringFav", JSON.stringify(arrayFav))
+            }   
+        }
+
         pastasSelecionadas.forEach(pasta => {
             const idAtual = pasta.closest('article').id
             arrayPastas[idAtual].id = idAtual;
@@ -167,7 +188,6 @@ if (parametros.size !== 0) {
                 alert("Esse pokémon já está em " + arrayPastas[idAtual].nome)
             } else {
             arrayPastas[idAtual].pokemons.push(pAtuais)
-            console.log(arrayPastas[idAtual])
             }
         });
         localStorage.setItem("arrayPastas", JSON.stringify(arrayPastas))
@@ -179,3 +199,26 @@ if (parametros.size !== 0) {
 function inPasta() {
     window.location.href = `inPasta.html?id=${this.id}`
 }
+
+const favoritos = document.querySelector("#favoritos")
+favoritos.addEventListener("click", function() {
+
+    if (parametros.size !== 0) {
+    const qualPasta = document.querySelector(".qualPasta")
+    const quantasSelecionadas = qualPasta.querySelector("h1")
+        if (favoritos.classList.contains("favoritoApenas")) {
+            favoritos.classList.remove("favoritoApenas")
+            favoritos.classList.add("favoritoSelecionado")
+            contador++;
+            quantasSelecionadas.textContent = `[ ${contador} ]`
+        } else {
+            favoritos.classList.remove("favoritoSelecionado")
+            favoritos.classList.add("favoritoApenas")
+            contador--;
+            quantasSelecionadas.textContent = `[ ${contador} ]`
+        }
+
+} else {
+    window.location.href = "favoritos.html"
+    }
+})

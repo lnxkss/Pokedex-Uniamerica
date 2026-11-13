@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourdex - Pasta</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/inPasta.css">
+</head>
+<body>
+    <nav class="sidebar"></nav>
+
+    <div class="telaRow">
+        <div class="nomePagina">
+            <h2 class="nomePagP" style="color: #ffe971;"><u>Favoritos</u></h2>
+        </div>
+
+
+
+
+        <div class="conteudoPoke">
+            <main class="divPokemons">
+            </main>
+        </div>
+    </div>
+
+    <div class="gtranslate_wrapper"></div>
+
+    <script src="favoritos.js"></script>
+    <script src="main.js"></script>
+    <script src="traducaoAPI.js"></script>
+
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "pt",
+            "native_language_names": true,
+            "languages": ["pt", "en"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "alt_flags": { "en": "usa", "pt": "brazil" }
+        };
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+</body>
+</html>
