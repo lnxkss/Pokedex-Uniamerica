@@ -20,3 +20,6 @@ const sidebar = document.querySelector(".sidebar");
       </a>
       
     `;
+
+const head = document.querySelector("head")
+head.insertAdjacentHTML("beforeend", '<link rel="icon" href="imgs/logo.webp" type="image/webp">')
