@@ -61,6 +61,12 @@ remover.addEventListener("click", function() {
     const confirmar = document.querySelector(".confirmar")
 
     if (modoRemover == 1) {
+        const lixeiras = document.querySelectorAll(".lixeira")
+
+        lixeiras.forEach(lixeira => {
+            lixeira.closest(".cardPokemon").style.border = "none"
+            lixeira.remove();
+        });
         confirmar.style.transform = "translateX(-100%)"
         h1Remover.textContent = "Remover Pokémons"
         modoRemover = 0;
