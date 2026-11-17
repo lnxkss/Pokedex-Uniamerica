@@ -70,6 +70,8 @@ remover.addEventListener("click", function() {
         confirmar.style.transform = "translateX(-100%)"
         h1Remover.textContent = "Remover Pokémons"
         modoRemover = 0;
+
+        paraRemover = []
     } else {
         confirmar.style.transform = "translateX(0%)"
         h1Remover.textContent = "Cancelar"
@@ -81,5 +83,5 @@ const confirmar = document.querySelector(".confirmar")
 confirmar.addEventListener("click", function() {
     arrayFav = arrayFav.filter(numero => !paraRemover.includes(Number(numero)));
     localStorage.setItem("stringFav", JSON.stringify(arrayFav))
-    window.location.href = "favoritos.html"
+    window.location.reload()
 })
