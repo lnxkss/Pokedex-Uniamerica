@@ -4,7 +4,7 @@ const pAtuais = parametros.get("id");
 const descricaoP = document.querySelector(".descricao");
 
 const stringFav = localStorage.getItem("stringFav") || "[]"
-const arrayFav = JSON.parse(stringFav)
+let arrayFav = JSON.parse(stringFav)
 
 let count;
 let estrela;
@@ -248,8 +248,8 @@ favoritar.addEventListener("click", function() {
     } else {
         favoritar.style.color = "black"
         favoritar.textContent = "☆"
-        const arrayAtualizado = arrayFav.filter(num => num !== pAtuais)
-        localStorage.setItem("stringFav", JSON.stringify(arrayAtualizado))
+        arrayFav = arrayFav.filter(num => num !== pAtuais)
+        localStorage.setItem("stringFav", JSON.stringify(arrayFav))
     }
 })
 
