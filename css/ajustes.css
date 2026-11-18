@@ -31,20 +31,20 @@
 .retangulo {
     width: 90%;
     height: 90%;
-    background-color: var(--white);
-    border-radius: 15px;    
+    background-color: var(--div-Pokemon);
+    border-radius: 10px;    
     display: flex;
     justify-content: start;
     flex-shrink: 1;
     overflow: hidden;
     cursor: pointer; 
     box-sizing: border-box; 
-    border: 1px solid transparent; 
+    border: 1px solid var(--black); 
     transition: border-color 0.2s ease;
 }
 
 .retangulo:hover {
-    border-color: var(--border-input); 
+    background-color: var(--bg-padrao);   
 }
 
 
@@ -56,14 +56,12 @@
 }
 
 .retangulo p{
-    font-size: 200%;
+    font-size: 180%;
     margin-bottom: auto;
     margin-top: auto;
     margin-left: 2%;
-
-    
-    
-
+    color: var(--font-Padrao);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .circulo img {
@@ -73,7 +71,11 @@
     
 }    
 
-
+#btn-aparencia img {
+    content: var(--icone-tema);
+    width: 7%;
+    margin-left: 10px;
+}
 
 .botoes-idioma {
     display: flex;
@@ -82,24 +84,24 @@
     margin-right: 20px;
     align-items: center;
     
-
 }
 
 
 .botoes-idioma button {
-    background-color: var(--white);
-    border: 2px solid var(--bg-padrao);
+    background-color: var(--bg-padrao);
+    border: 2px solid var(--div-Pokemon);
     border-radius: 10px;
     padding: 15px 30px;
     font-size: 110%;
     cursor: pointer;
+    color: var(--font-Padrao);
     
 }
 
 .botoes-idioma button.ativo {
     background-color: var(--bg-padrao);
     color: var(--font-Padrao);
-    border-color: var(--border-input);
+    border-color: var(--black);
     transition: all 0.5s ease-in-out;
     transform: scale(1.1);
     
@@ -107,8 +109,7 @@
 
 
 .botoes-idioma button:hover {
-    
-    border-color: var(--border-input);
+    border-color: var(--shadow);
 }
 
 .quadrado{
@@ -155,7 +156,6 @@
     font-size: 200%;
     text-align: center;
     margin-top: -10%;
-    
 
 }
 
@@ -166,7 +166,7 @@
     border-radius: 8px;
     box-shadow: 0px 0px 18px var(--shadow); 
     transition: all 0.2s ease-in-out;
-    border: solid 2px var(--border-input);
+    border: solid 2px var(--black);
 }
 
 .botao button:hover {

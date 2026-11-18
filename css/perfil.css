@@ -14,6 +14,7 @@
     font-size: 28px;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--font-Padrao);
 }
 
 .linha {
@@ -61,6 +62,8 @@
 .usuario p{
     font-size: 25px;
     text-transform: uppercase;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: var(--font-Padrao);
 }
 
 .usuario a {
@@ -114,7 +117,8 @@
     margin-top: 0%;
     margin-left: 0%;
     font-size: 20px;
-    font-family: 'Arial', sans-serif;   
+    color: var(--font-Padrao);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .botoes {

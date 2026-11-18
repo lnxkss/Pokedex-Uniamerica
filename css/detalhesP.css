@@ -10,7 +10,6 @@ html {
 }
 
 .fundo {
-    background-color: var(--detalhes-bg);
     margin-left: 100px;
     width: 100vw;
     height: 100vh;
@@ -20,12 +19,14 @@ html {
 }
 
 .headerD {
+    content: var(--header-detalhe);
     margin-left: 50px;
     width: 100%;
     height: 100%;
     position: fixed;
     pointer-events: none;
     z-index: 100;
+    
 }
 
 .fundoCor {
@@ -36,7 +37,7 @@ html {
     flex-direction: column;
     justify-content: end;
     align-items: center;
-    background-color: var(--detalhes-bg);
+    background-color:var(--detalhes-bg);
     flex-grow: 1;
 }
 

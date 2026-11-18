@@ -12,12 +12,14 @@
 .perfil-topo p {
     margin: 0;
     font-size: 28px;
+    color: var(--font-Padrao);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .perfil-topo1 p {
     margin: 0;
     font-size: 20px;
+    color: var(--subtitle);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -38,6 +40,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    color: var(--font-Padrao);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .usuario {
@@ -55,6 +59,7 @@
 .usuario p{
     font-size: 25px;
     text-transform: uppercase;
+    color: var(--font-Padrao);
 }
 
 .usuario a {
@@ -78,12 +83,13 @@
 .foto-usuario {
     width: 70%;
     height: 35%;
-    background-color: var(--bg-padrao);
+    background-color: var(--bg);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 10px var(--shadow);
+
 }
 
 .foto-usuario img {
@@ -91,14 +97,16 @@
     height: 70%;
 }    
 
+
+
 .informacao{
     display: flex;
     flex-direction: row;;
     margin-top: 9%;
     margin-bottom: 4%;
     font-size: 20px;
-    color: var(--font-Padrao);
-    font-family: 'Arial', sans-serif;
+    color:  var(--font-Padrao);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -108,8 +116,10 @@
     margin-top: 0%;
     margin-left: 0%;
     font-size: 20px;
-    font-family: 'Arial', sans-serif;   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 
 }
+
+
 
 .botoes {
     margin-bottom: 6%;
@@ -138,15 +148,16 @@
     cursor: pointer;
     transform: scale(1.025);
 }
+
+
+
 .retangulo {
     width: 80%;
     height: 60%;
-    background-color: var(--white);
-    border-radius: 10px;  
     display: flex;
     justify-content: center;
     margin-right: 20px;
-    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
@@ -161,7 +172,8 @@
 }
 
 .barra p {
-    font-size: 150%;
+    font-size: 140%;
+
 }
 
 .org {
@@ -172,10 +184,15 @@
 
 .retangulo input{
     width: 100%;
-    border-radius: 5px;
-    border: solid 2px;
+    border-radius:5px;
+    border: solid 2px var(--black);
     padding-left: 10px;
-
+    background-color: var( --input-color);
+    color: var(--font-Padrao);
+}
+.retangulo input:focus {
+    outline: none;
+    border-color: var(--border-input); 
 }
 
 .lapis {
@@ -183,6 +200,8 @@
     width: 10%;
     height: 3rem;
 }
+
+
 
 
 @media (max-width: 768px) {

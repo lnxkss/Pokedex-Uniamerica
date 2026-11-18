@@ -1,19 +1,66 @@
-:root{
---nomePag: #ffff;
---bg-padrao: #dfdfdf;
---btn-Hover: #f5d313;
---btn-bg: #f1c40f;
---font-Padrao: rgb(0, 0, 0);
---shadow: rgba(0, 0, 0, 0.438);
---modal-shadow: rgba(0, 0, 0, 0.7);
---detalhes-bg: #b80115 ;
---btn-x-hover: #333333;
---subtitle: #666666;
---border-input: #333333;
---white: #ffffff;
---black: #000000;
---link-blue:  rgb(50, 5, 195);
---link-red: red;
---link-redHover: rgb(249, 108, 108);
+:root {
+  --img-fundo: url(../imgs/Fundo.webp);
+  --icone-tema: url(../imgs/sol.webp);
+  --nomePag: #ffffff;
+  --contorno-pag: #000000;
+  --bg-padrao: #dfdfdf;
+  --btn-Hover: #f5d313;
+  --btn-bg: #f1c40f;
+  --font-Padrao: rgb(0, 0, 0);
+  --shadow: rgba(0, 0, 0, 0.438);
+  --modal-shadow: rgba(0, 0, 0, 0.7);
+  --detalhes-bg: #b80115;
+  --btn-x-hover: #333333;
+  --subtitle: #666666;
+  --border-input: #333333;
+  --white: #ffffff;
+  --black: #000000;
+  --link-blue: rgb(50, 5, 195);
+  --link-red: red;
+  --link-redHover: rgb(249, 108, 108);
+  --div-Pokemon: #e8e8e8;
+  --input-color: #ffffff;
+    --pasta: url("../imgs/Pastas.webp");
+  --add-Pasta: url("../imgs/CriacaoDePastas.webp");
+  --header-detalhe: url("../imgs/headerImg.webp");
+  
+}
+[data-theme="dark"] {
+  --header-detalhe: url("../imgs/headerD.png");
+  --img-fundo: url("../imgs/FundoDark.webp");
+  --icone-tema: url("../imgs/lua.webp");
+  --pasta: url("../imgs/pastaD.webp");
+  --add-Pasta: url("../imgs/pastaD+.webp");
 
+  --nomePag: #ffffff;
+  --contorno-pag: #777070;
+
+    --detalhes-bg: #4a4242;
+  --bg-padrao: #292526;
+
+  --btn-Hover: #f5d313;
+  --btn-bg: #f1c40f;
+
+  --font-Padrao: #f5eeee;
+
+  --shadow: rgba(0, 0, 0, 0.55);
+  --modal-shadow: rgba(0, 0, 0, 0.8);
+
+  
+
+  --btn-x-hover: #443b3b;
+
+  --subtitle: #b9aeae;
+
+  --border-input: #655b5b;
+  --input-color:  #484343;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --link-blue: #75baff;
+  --link-red: #ff5555;
+  --link-redHover: #ff8888;
+
+  --div-Pokemon: #2d2a2a;
 }

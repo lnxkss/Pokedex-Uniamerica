@@ -60,8 +60,26 @@ function mudarIdioma(idioma) {
     }
 }
 
-// Verifica se já tinha um idioma salvo logo ao carregar a página de Ajustes
+// --- 4. Lógica da Aparência (Modo Escuro / Claro) ---
+const btnAparencia = document.getElementById('btn-aparencia');
+const html = document.documentElement;
+
+if (btnAparencia) {
+    btnAparencia.addEventListener('click', () => {
+        // Se o tema atual for dark, muda para light e grava na memória. Se não, ativa o dark.
+        if (html.getAttribute('data-theme') === 'dark') {
+            html.setAttribute('data-theme', 'light');
+            localStorage.setItem('tema', 'light');
+        } else {
+            html.setAttribute('data-theme', 'dark');
+            localStorage.setItem('tema', 'dark');
+        }
+    });
+}
+
+// --- 5. Inicializações ao carregar a página de Ajustes ---
 document.addEventListener("DOMContentLoaded", function() {
+    // Checagem do idioma salvo
     const idiomaSalvo = localStorage.getItem("idiomaSelecionado");
     if (idiomaSalvo && idiomaSalvo !== 'pt') {
         setTimeout(() => {

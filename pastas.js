@@ -7,7 +7,7 @@ function carregarPastas() {
     let id = 0
     pastas.innerHTML = `
     <a href="criarPastas.html">
-    <img src="imgs/CriacaoDePastas.webp" alt="Pokedex" class="criacaodepastas">
+    <img src="" class="criacaodepastas">
     </a>
     `
 if (arrayPastas !== null) {
@@ -20,7 +20,7 @@ if (arrayPastas !== null) {
         }
         pastas.innerHTML += `
             <article class="pastas" id="${id}">
-            <img src="imgs/Pastas.webp" alt="Pasta" width="215px"/>
+            <img src="" alt="Pasta"/>
             <h2>${nomeTrun}</h2>
             <button type="button" class="reticencias">...</button>
             </article>
