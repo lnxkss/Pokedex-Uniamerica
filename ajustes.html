@@ -8,50 +8,43 @@
     <link rel="stylesheet" href="css/ajustes.css">
 </head>
 <body>
-         <nav class="sidebar"></nav>
+    <nav class="sidebar"></nav>
 
-         <div class="telaRow">
+    <div class="telaRow">
 
         <div class="nomePagina">
             <h2 class="nomePagP"><u>Ajustes</u></h2>
         </div>
 
-       <div class="conteudo">
+        <div class="conteudo">
             <div class="fundo">
 
-                <div class="circulo">
-                    <img src="imgs/configP.webp" alt="">
-                </div>
-                
                 <div class="retangulo" role="button" tabindex="0" id="btn-perfil">
-                    <img src="imgs/perfil.webp" alt="">
-
-                    <p>Perfil</p>
+                    <img style="width: 90px;" src="imgs/perfil.webp" style="opacity: 0.5"; alt="">
+                    <p style="margin-bottom: 70px; margin-top: 20;" class="nome-opcoes">Perfil</p>
                 </div>
 
+                <div class="retangulo idioma">
+                    <img src="imgs/convert.webp" alt="">
+                    <p class="nome-opcoes">Idioma</p>
 
-                
-<div class="retangulo idioma">
-    <img src="imgs/convert.webp" alt="">
-    <p>Idioma</p>
 
-    
-    <div class="botoes-idioma">
-        <button onclick="mudarIdioma('pt')">PT</button>
-        <button onclick="mudarIdioma('en')">EN</button>
-    </div>
-</div>
+                    <div class="botoes-idioma">
+                        <button onclick="mudarIdioma('pt')">PT</button>
+                        <button onclick="mudarIdioma('en')">EN</button>
+                    </div>
+                </div>
 
 
                 <div class="retangulo">
                     <img src="imgs/sol.webp" alt="">
-                    
-                    <p>Aparência</p>
+
+                    <p class="nome-opcoes">Aparência</p>
                 </div>
 
-                <div class="retangulo" id="excluir"> 
+                <div class="retangulo" id="excluir">
                     <img src="imgs/sair.webp" style="opacity: 0.5;" alt="">
-                    <p>Excluir conta</p>
+                    <p class="nome-opcoes">Excluir conta</p>
                 </div>
 
             </div>
@@ -63,14 +56,15 @@
 
     <div class="quadrado">
 
-        
+
         <div class="circulo2">
             <img src="imgs/logo.webp" alt="">
 
         </div>
 
         <div class="ajusta">
-        <p class="fonte">Tem certeza de quer <br>  excluir sua conta</p></div>
+            <p class="fonte">Tem certeza de quer <br> excluir sua conta</p>
+        </div>
 
         <div class="botao">
             <button type="button" class="botao2">Sim</button>
@@ -84,8 +78,9 @@
 
 
 
-        <script src="ajustes.js"></script>
+    <script src="ajustes.js"></script>
 
-         <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>

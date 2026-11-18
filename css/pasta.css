@@ -237,7 +237,7 @@
     .quadradao {
         width: 100%;
         height: auto;
-        min-height: 350px;
+        min-height: 80vh;
         padding: 20px;
     }
 

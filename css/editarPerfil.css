@@ -163,7 +163,7 @@
     }
 
     .perfil-conteudo {
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
     }
 
@@ -240,5 +240,6 @@
     width: 10%;
     height: 3rem;
 }
+
 
 

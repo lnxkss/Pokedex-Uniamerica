@@ -530,6 +530,7 @@ main {
 
     .criarConta {
         height: auto;
+        margin-left: 280px;
     }
 
     .criarConta p {
@@ -595,5 +596,9 @@ main {
         max-height: 85vh;
         box-sizing: border-box;
         overflow-y: auto;
+    }
+
+    .header h2 {
+      margin-right: 0px;
     }
 }
