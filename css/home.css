@@ -487,6 +487,8 @@ main {
 
 .search {
     width: 30px;
+    margin-top: 4px;
+    transform: scaleX(-1);
 }
 
 .semCorrespondencia {

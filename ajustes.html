@@ -6,13 +6,21 @@
     <title>Ajustes</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/ajustes.css">
-    <link rel="stylesheet" href="css/perfil.css">
+    <style>
+        .gtranslate_wrapper, #goog-gt-tt, .skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0 !important;
+        }
+    </style>
 </head>
 <body>
+    <div class="gtranslate_wrapper"></div>
+
     <nav class="sidebar"></nav>
 
     <div class="telaRow">
-
         <div class="nomePagina">
             <h2 class="nomePagP"><u>Ajustes</u></h2>
         </div>
@@ -48,20 +56,13 @@
                     <img src="imgs/sair.webp" style="opacity: 0.5;" alt="">
                     <p class="nome-opcoes">Excluir conta</p>
                 </div>
-
             </div>
-
         </div>
-
-
     </div>
 
     <div class="quadrado">
-
-
         <div class="circulo2">
             <img src="imgs/logo.webp" alt="">
-
         </div>
 
         <div class="ajusta">
@@ -76,6 +77,8 @@
 
     <div class="preto"></div>
 
+    <script src="ajustes.js"></script>
+    <script src="main.js"></script>
 
 
 
@@ -85,4 +88,16 @@
     <script src="main.js"></script>
 </body>
 
+</html>
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "pt",
+            "native_language_names": true,
+            "languages": ["pt", "en"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "alt_flags": { "en": "usa", "pt": "brazil" }
+        }
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+</body>
 </html>

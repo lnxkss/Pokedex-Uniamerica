@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourdex - Pasta</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/inPasta.css">
+</head>
+<body>
+    <nav class="sidebar"></nav>
+
+    <div class="telaRow">
+        <div class="nomePagina">
+            <h2 class="nomePagP"><u></u></h2>
+
+            <div class="remover">
+                <h1 id="h1Remover">Remover Pokémons</h1>
+            </div>
+
+            <div class="confirmar">
+                <h1>Confirmar remoção?</h1>
+            </div>
+        </div>
+
+
+
+
+        <div class="conteudoPoke">
+            <main class="divPokemons">
+            </main>
+        </div>
+    </div>
+
+    <div class="gtranslate_wrapper"></div>
+
+    <script src="main.js"></script>
+    <script src="traducaoAPI.js"></script>
+
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "pt",
+            "native_language_names": true,
+            "languages": ["pt", "en"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "alt_flags": { "en": "usa", "pt": "brazil" }
+        };
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+    <script src="inPasta.js"></script>
+</body>
+</html>

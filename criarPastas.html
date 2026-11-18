@@ -38,7 +38,21 @@
       </div>
     </div>
 
+    <div class="gtranslate_wrapper"></div>
+
     <script src="main.js"></script>
     <script src="criarPastas.js"></script>
+    <script src="traducaoAPI.js"></script>
+
+    <script>
+        window.gtranslateSettings = {
+            "default_language": "pt",
+            "native_language_names": true,
+            "languages": ["pt", "en"],
+            "wrapper_selector": ".gtranslate_wrapper",
+            "alt_flags": { "en": "usa", "pt": "brazil" }
+        };
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
   </body>
 </html>
