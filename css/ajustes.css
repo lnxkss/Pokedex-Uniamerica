@@ -35,7 +35,7 @@
     border-radius: 15px;    
     display: flex;
     justify-content: start;
-    flex-shrink: 1;
+    flex-shrink: 1; 
     overflow: hidden;
     cursor: pointer; 
     box-sizing: border-box; 
@@ -49,11 +49,12 @@
 
 
 .retangulo img{
-    width: 7%;
+    width: 8%;
     margin-left: 10px;
 
 
 }
+
 
 .retangulo p{
     font-size: 200%;
